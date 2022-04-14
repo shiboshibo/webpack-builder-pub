@@ -1,0 +1,2551 @@
+{
+  "code": 0,
+  "data": {
+    "infos": [
+      {
+        "id": 100039701,
+        "spu": 397,
+        "ctime": 1573102704,
+        "utime": 1649646221,
+        "begin_time": 1573056000,
+        "end_time": 1888934400,
+        "price": {
+          "market": 9900,
+          "sale": 9900,
+          "sale_type": 1,
+          "start_time": 0,
+          "end_time": 0
+        },
+        "is_onborad": true,
+        "is_sale": false,
+        "is_groupbuy": false,
+        "is_promo": false,
+        "is_shareget": false,
+        "is_sharesale": true,
+        "type": "c1",
+        "is_column": true,
+        "is_core": true,
+        "is_video": false,
+        "is_audio": true,
+        "is_dailylesson": false,
+        "is_university": false,
+        "is_opencourse": false,
+        "is_qconp": false,
+        "nav_id": 1,
+        "time_not_sale": 0,
+        "title": "JavaScript核心原理解析",
+        "subtitle": "重构你对JavaScript语言的认知",
+        "intro": "作为前端工程师必备技能，JavaScript 的重要性不言而喻。但是，很多人对 JavaScript 的印象都只是“简单易学”，对其掌握也仅仅停留在“会用就好”，以至于不求甚解、迷失于 JavaScript 。究其原因，他们从来都只是“写代码”，而没有去真正去了解、去探索“什么是语言”。\nJavaScript 作为一门语言，虽然易上手，但却有着诸多复杂微妙的机制，想要真正掌握绝非易事。而这些机制，正是 JavaScript 语言的精髓。只有当你深入理解语言内部的实现原理，才能做到无论出现什么新技术、新框架，都能轻松应对。\n而这个专栏将以“语言”为核心，主要讨论语言设计、结构化和面向对象特性，以及部分的动态语言特性。通过本专栏，希望你能找到自己对语言的认识，构建一个语言知识结构。\n专栏的每一讲都是一个独立话题，以一行代码为标题，整个话题会围绕该行代码展开。内容包括：代码的特殊性，代码所涉问题的领域，代码的逐步分解解析，与该代码相似的或同类的问题，潜在的应用，不为人知的历史，标准规范对此的态度，业界的一些看法与争议等等。\n专栏正文共21期，分为4个模块。\n“从零开始”主要讲述构成JavaScript语言的基础——JavaScript语言的静态结构，主要包括词法环境、块级作用域、语句、声明、字面量、变量环境、模块（名字空间）等等。\n“从表达式到执行引擎”主要讲述JavaScript的执行过程，主要包括执行栈、执行队列、执行上下文、函数（函数对象/闭包）作为执行结构如何参与运算等等，还将讲述表达式（运算符+操作数）与优先级这个体系，说明表达式运算与语句运算间的不同。\n“从原型到类”主要讲述JavaScript面向对象编程体系中最核心的一些设计，包括类继承、原型继承、属性表的使用、内部方法等等，并对索引数组和关联数组在JavaScript中的应用与整合做深度分析。\n“从粗通到精通的进阶之路”主要讲述JavaScript作为动态语言的主要特性，包括动态的类型、动态的执行过程和动态的环境上下文等等。\n",
+        "intro_html": "\u003cp\u003e作为前端工程师必备技能，JavaScript 的重要性不言而喻。但是，很多人对 JavaScript 的印象都只是“简单易学”，对其掌握也仅仅停留在“会用就好”，以至于不求甚解、迷失于 JavaScript 。究其原因，他们从来都只是“写代码”，而没有去真正去了解、去探索“什么是语言”。\u003c/p\u003e\n\u003cp\u003eJavaScript 作为一门语言，虽然易上手，但却有着诸多复杂微妙的机制，想要真正掌握绝非易事。而这些机制，正是 JavaScript 语言的精髓。只有当你深入理解语言内部的实现原理，才能做到无论出现什么新技术、新框架，都能轻松应对。\u003c/p\u003e\n\u003cp\u003e而这个专栏将以“语言”为核心，主要讨论语言设计、结构化和面向对象特性，以及部分的动态语言特性。通过本专栏，希望你能找到自己对语言的认识，构建一个语言知识结构。\u003c/p\u003e\n\u003cp\u003e专栏的每一讲都是一个独立话题，以一行代码为标题，整个话题会围绕该行代码展开。内容包括：代码的特殊性，代码所涉问题的领域，代码的逐步分解解析，与该代码相似的或同类的问题，潜在的应用，不为人知的历史，标准规范对此的态度，业界的一些看法与争议等等。\u003c/p\u003e\n\u003cp\u003e专栏正文共21期，分为4个模块。\u003c/p\u003e\n\u003cp\u003e“\u003cstrong\u003e从零开始\u003c/strong\u003e”主要讲述构成JavaScript语言的基础——JavaScript语言的静态结构，主要包括词法环境、块级作用域、语句、声明、字面量、变量环境、模块（名字空间）等等。\u003c/p\u003e\n\u003cp\u003e“\u003cstrong\u003e从表达式到执行引擎\u003c/strong\u003e”主要讲述JavaScript的执行过程，主要包括执行栈、执行队列、执行上下文、函数（函数对象/闭包）作为执行结构如何参与运算等等，还将讲述表达式（运算符+操作数）与优先级这个体系，说明表达式运算与语句运算间的不同。\u003c/p\u003e\n\u003cp\u003e“\u003cstrong\u003e从原型到类\u003c/strong\u003e”主要讲述JavaScript面向对象编程体系中最核心的一些设计，包括类继承、原型继承、属性表的使用、内部方法等等，并对索引数组和关联数组在JavaScript中的应用与整合做深度分析。\u003c/p\u003e\n\u003cp\u003e“\u003cstrong\u003e从粗通到精通的进阶之路\u003c/strong\u003e”主要讲述JavaScript作为动态语言的主要特性，包括动态的类型、动态的执行过程和动态的环境上下文等等。\u003c/p\u003e\n",
+        "ucode": "66292B32F9960A",
+        "is_finish": true,
+        "author": {
+          "name": "周爱民",
+          "intro": "《JavaScript语言精髓与编程实践》作者，南潮科技（Ruff）首席架构师",
+          "info": "",
+          "avatar": "https://static001.geekbang.org/resource/image/f4/1e/f4b4ccf71ee85661a1f09390cf34b81e.jpg",
+          "brief_html": "\u003cp\u003e周爱民，前端“绿皮书”《JavaScript语言精髓与编程实践》作者，专注于软件开发与架构、项目管理二十余年，曾任盛大网络平台架构师、支付宝业务架构师、豌豆荚首席架构师等职。著有《Delphi源代码分析》《大道至简：软件工程实践者的思想》《大道至易：实践者的思想》《程序原本》《我的架构思想：基本模型、理论与原则》等书。\u003c/p\u003e\n",
+          "brief": "周爱民，前端“绿皮书”《JavaScript语言精髓与编程实践》作者，专注于软件开发与架构、项目管理二十余年，曾任盛大网络平台架构师、支付宝业务架构师、豌豆荚首席架构师等职。著有《Delphi源代码分析》《大道至简：软件工程实践者的思想》《大道至易：实践者的思想》《程序原本》《我的架构思想：基本模型、理论与原则》等书。\n"
+        },
+        "cover": {
+          "square": "https://static001.geekbang.org/resource/image/f4/1e/f4b4ccf71ee85661a1f09390cf34b81e.jpg",
+          "rectangle": "https://static001.geekbang.org/resource/image/92/a8/929d8218199f09b6a2a4cd29024e58a8.png",
+          "horizontal": "https://static001.geekbang.org/resource/image/35/1c/35d99e0523df245eac094fed0bf3c01c.jpg",
+          "lecture_horizontal": "https://static001.geekbang.org/resource/image/1d/f4/1dee6be675d9badc8705d154a8d5e7f4.jpg",
+          "learn_horizontal": "https://static001.geekbang.org/resource/image/15/fb/155008d7ebd19099603a15a5c47f4ffb.png",
+          "transparent": "https://static001.geekbang.org/resource/image/46/a2/4650245eaa175a6130db3711adc073a2.png",
+          "color": "#b7d1d0"
+        },
+        "article": {
+          "id": 0,
+          "count": 28,
+          "count_req": 25,
+          "count_pub": 28,
+          "total_length": 30553,
+          "first_article_id": 0,
+          "first_article_title": ""
+        },
+        "seo": { "keywords": ["前端", "JavaScript"] },
+        "share": {
+          "title": "周爱民 · JavaScript核心原理解析",
+          "content": "重构你对JavaScript语言的认知",
+          "cover": "https://static001.geekbang.org/resource/image/f4/1e/f4b4ccf71ee85661a1f09390cf34b81e.jpg",
+          "poster": "https://static001.geekbang.org/resource/image/38/03/38b094a27df55c2ac8eda23330c20a03.jpg"
+        },
+        "labels": [5, 30, 32],
+        "unit": "28讲",
+        "column_type": 1,
+        "column": {
+          "unit": "28讲",
+          "bgcolor": "F6F7FB",
+          "update_frequency": "全集",
+          "is_preorder": false,
+          "is_finish": true,
+          "is_include_preview": true,
+          "show_chapter": true,
+          "is_sale_product": true,
+          "study_service": [1, 2, 3, 5, 14],
+          "path": {
+            "desc": "你将获得：\n\n深度解读 JavaScript 核心技术；\nJavaScript 语言特性以及原理剖析；\n帮你构建语言知识结构体系；\nJavaScript 的精进指南。\n\n",
+            "desc_html": "\u003cp\u003e\u003cstrong\u003e你将获得\u003c/strong\u003e：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e深度解读 JavaScript 核心技术；\u003c/li\u003e\n\u003cli\u003eJavaScript 语言特性以及原理剖析；\u003c/li\u003e\n\u003cli\u003e帮你构建语言知识结构体系；\u003c/li\u003e\n\u003cli\u003eJavaScript 的精进指南。\u003c/li\u003e\n\u003c/ul\u003e\n"
+          },
+          "is_camp": false,
+          "catalog_pic_url": "https://static001.geekbang.org/resource/image/ff/19/ff0b71aa072af4ad6d1012c1b815fa19.jpg",
+          "recommend_articles": [
+            165198, 165985, 167907, 171617, 179238, 185031
+          ],
+          "recommend_comments": [],
+          "ranks": null,
+          "hot_comments": null,
+          "hot_lines": null,
+          "display_type": 3,
+          "intro_bg_style": 1,
+          "comment_top_ads": "",
+          "article_float_qrcode_url": "",
+          "article_float_app_qrcode_url": "",
+          "article_float_qrcode_jump": "",
+          "in_rank": false
+        },
+        "dl": {
+          "article": {
+            "id": 0,
+            "video_duration": "",
+            "video_hot": 0,
+            "could_preview": false
+          },
+          "topic_ids": []
+        },
+        "university": {
+          "total_hour": 0,
+          "term": 0,
+          "redirect_type": "",
+          "redirect_param": "",
+          "wx_qrcode": "",
+          "wx_rule": "",
+          "server_start_time": 0,
+          "lecturer_h_cover": ""
+        },
+        "opencourse": {
+          "video_bg": "",
+          "ad": {
+            "cover": "",
+            "cover_web": "",
+            "redirect_type": "",
+            "redirect_param": ""
+          },
+          "article_fav": { "aid": 0, "had_done": false, "count": 0 },
+          "author_h_cover": ""
+        },
+        "qconp": {
+          "topic_id": 0,
+          "cover_appoint": "",
+          "article": {
+            "id": 0,
+            "cover": "",
+            "video_duration": "",
+            "video_hot": 0
+          }
+        },
+        "fav_qrcode": "",
+        "extra": {
+          "sub": {
+            "count": 20004,
+            "had_done": false,
+            "could_order": true,
+            "access_mask": 0
+          },
+          "fav": { "count": 0, "had_done": false },
+          "rate": {
+            "article_count": 0,
+            "article_count_req": 0,
+            "is_finished": false,
+            "rate_percent": 0,
+            "video_seconds": 0,
+            "last_article_id": 0,
+            "last_chapter_id": 0,
+            "has_learn": false
+          },
+          "cert": { "id": "", "type": 0 },
+          "nps": {
+            "min": 13,
+            "status": 0,
+            "url": "https://jinshuju.net/f/kyZ77W"
+          },
+          "any_read": { "total": 3, "count": 0 },
+          "university": {
+            "status": 0,
+            "view_status": 0,
+            "charge_status": 0,
+            "share_renewal_status": 0,
+            "unlocked_status": 0,
+            "unlocked_chapter_ids": [],
+            "unlocked_chapter_id": 0,
+            "unlocked_chapter_title": "",
+            "unlocked_article_count": 0,
+            "unlocked_next_time": 0,
+            "expire_time": 0,
+            "is_expired": false,
+            "is_graduated": false,
+            "had_sub": false,
+            "timeline": [],
+            "has_wx_friend": false,
+            "sub_term_title": ""
+          },
+          "vip": { "is_year_card": false, "show": false, "end_time": -1 },
+          "appoint": { "could_do": false, "had_done": false, "count": 0 },
+          "group_buy": {
+            "success_ucount": 0,
+            "join_code": "",
+            "could_groupbuy": false,
+            "had_join": false,
+            "price": 0,
+            "list": []
+          },
+          "sharesale": {
+            "original_pic_color": "595656",
+            "original_pic_url": "https://static001.geekbang.org/render/screen/b2/1b/b21e5e16786c6622addbda314f1b421b.jpeg",
+            "promo_pic_color": "3D5156",
+            "promo_pic_url": "https://static001.geekbang.org/render/screen/b2/1b/b21e5e16786c6622addbda314f1b421b.jpeg",
+            "share_sale_price": 2000,
+            "share_sale_guest_price": 0
+          },
+          "promo": { "ent_time": 0 },
+          "channel": { "is": false, "back_amount": 0 },
+          "first_promo": { "price": 0, "could_join": false },
+          "coupon_promo": { "could_join": false, "price": 0 },
+          "helper": [],
+          "tab": { "comment": false },
+          "modules": [
+            {
+              "name": "gain",
+              "title": "",
+              "content": "\n深度解读 JavaScript 核心技术；\nJavaScript 语言特性以及原理剖析；\n帮你构建语言知识结构体系；\nJavaScript 的精进指南。\n\n",
+              "type": "",
+              "is_top": false
+            }
+          ],
+          "cid": 0,
+          "first_aids": [],
+          "study_plan": {
+            "id": 0,
+            "day_nums": 0,
+            "article_nums": 0,
+            "learned_week_nums": 0,
+            "status": 0
+          },
+          "cate_id": 303,
+          "cate_name": "",
+          "group_tag": { "is_recommend": false, "is_recently_learn": false },
+          "first_award": {
+            "show": false,
+            "talks": 0,
+            "reads": 0,
+            "amount": 0,
+            "expire_time": 0,
+            "redirect_type": "",
+            "redirect_param": ""
+          }
+        },
+        "available_coupons": [2630],
+        "in_pvip": 0
+      },
+      {
+        "id": 100033601,
+        "spu": 336,
+        "ctime": 1564729129,
+        "utime": 1649646233,
+        "begin_time": 1564675200,
+        "end_time": 1572019200,
+        "price": {
+          "market": 12900,
+          "sale": 12900,
+          "sale_type": 1,
+          "start_time": 0,
+          "end_time": 0
+        },
+        "is_onborad": true,
+        "is_sale": false,
+        "is_groupbuy": false,
+        "is_promo": false,
+        "is_shareget": false,
+        "is_sharesale": true,
+        "type": "c1",
+        "is_column": true,
+        "is_core": true,
+        "is_video": false,
+        "is_audio": true,
+        "is_dailylesson": false,
+        "is_university": false,
+        "is_opencourse": false,
+        "is_qconp": false,
+        "nav_id": 1,
+        "time_not_sale": 0,
+        "title": "浏览器工作原理与实践",
+        "subtitle": "透过浏览器看懂前端本质",
+        "intro": "浏览器是上网的入口，是互联网的“咽喉”。我们每天的工作、学习和娱乐等都离不开浏览器，各行各业、越来越多的应用也都依赖于此，特别是随着云计算的普及和HTML5技术的快速发展，它的重要性更是与日俱增。\n为了能准确评估Web开发项目的可行性，站在更高维度审视页面，以及在快节奏的前端技术迭代中把握住问题的本质，完成前端技能进阶，学习浏览器的工作原理就势在必行了。\n特别是前端技术出现了大爆炸式增长，各种新技术层出不穷，为了避免疲于应付，你可以通过学习浏览器的工作原理，掌握前端知识的本源，以不变应万变。\n为便于你快速对浏览器有个宏观的把控，李兵和极客时间团队专门做了一个小视频“工程师视角下的浏览器是怎样的”：\n\n在这门讲解浏览器工作原理的课程中，李兵会用深入浅出的讲解方式、图文并茂的展现形式，把网络、页面渲染、JavaScript、浏览器安全等知识串联起来，从而让你高质量、高效率地学习这门课程，系统掌握浏览器工作原理，并同时把理论应用到前端实践中去。\n模块介绍\n本课程共分为7大模块。\n1. 宏观视角下的浏览器\n本模块通过Chrome的多进程架构来介绍HTTP请求流程、导航流程和页面的渲染流程，带你从宏观视角建立浏览器的知识体系。\n2. 浏览器中的JavaScript执行机制\n虽然语法上和C语言很像，但是JavaScript背后的机制却又完全不同，很多人学习JavaScript时经常处于似懂非懂的状态。本模块则是站在浏览器的视角，来分析JavaScript代码的执行过程。如果你能掌握这些执行过程，那么很多诸如闭包、变量提升等疑难问题就会迎刃而解。\n3. V8工作原理\n继续深入探讨来自Google的JavaScript引擎V8，分析其执行流程，细化讲解JavaScript中数据是如何存储和回收的。通过本模块的学习，你离打造高性能且节约内存的Web应用就更近一步了。\n4. 浏览器中的页面事件循环系统\n要让不同类型的任务在主线程中有条不紊地执行，这就需要有一个事件循环系统，用来负责接收、调度这些不同的事件。本模块会深入探讨Web页面中的事件循环系统，讲解页面中的微任务和宏任务的实现机制，最后还会介绍一些WebAPI是如何与页面的事件循环系统结合\u0008使用的。理解事件循环，能让你从更高维度理解页面是如何运行的，并加深你对页面中异步事件的理解。\n5. 浏览器中的页面\n页面是浏览器的核心，浏览器中的所有功能点都是服务于页面的。本模块会对页面做全面的介绍，包括构建页面的核心流程、页面性能的分析过程。最后还会介绍一些应用场景，比如流行的前端框架为什么要有虚拟DOM，最近比较火的PWA的工作原理，以及WebComponent。\n6. 浏览器中的网络\n网络的重要性毋庸置疑，但是很多前端工程师却\u0008往往忽视它的存在。本模块通过HTTP/1、HTTP/2和HTTP/3的介绍，让你全面了解浏览器中的网络，并最终让你能向下理解其底层原理、向上理解其应用方向。\n7. 浏览器安全\n和浏览器打交道的内容都是通过网络进行的，但通常通过网络传输的内容是不被浏览器信任的，所以对于可能存在危险的地方都要重点防护。本模块会通过实例，向你介绍为何会出现各种安全问题，以及如何避免这些安全攻击。\n",
+        "intro_html": "\u003cp\u003e浏览器是上网的入口，是互联网的“咽喉”。我们每天的工作、学习和娱乐等都离不开浏览器，各行各业、越来越多的应用也都依赖于此，特别是随着云计算的普及和HTML5技术的快速发展，它的重要性更是与日俱增。\u003c/p\u003e\n\u003cp\u003e为了能准确评估Web开发项目的可行性，站在更高维度审视页面，以及在快节奏的前端技术迭代中把握住问题的本质，完成前端技能进阶，学习浏览器的工作原理就势在必行了。\u003c/p\u003e\n\u003cp\u003e特别是前端技术出现了大爆炸式增长，各种新技术层出不穷，为了避免疲于应付，你可以通过\u003cstrong\u003e学习浏览器的工作原理，掌握前端知识的本源，以不变应万变\u003c/strong\u003e。\u003c/p\u003e\n\u003cp\u003e为便于你快速对浏览器有个宏观的把控，李兵和极客时间团队专门做了一个小视频“工程师视角下的浏览器是怎样的”：\u003c/p\u003e\n\u003cp\u003e\u003cvideo poster=\"https://static001.geekbang.org/resource/image/f0/28/f0e68dbd84eeddaaddd6f53b2e0f7728.png\" preload=\"none\" controls\u003e\u003csource src=\"https://media001.geekbang.org/customerTrans/fe4a99b62946f2c31c2095c167b26f9c/44a2c187-16d14098aa2-0000-0000-01d-dbacd.mp4\" type=\"video/mp4\" /\u003e\u003csource src=\"https://media001.geekbang.org/3cfba66e4a0348588f9ffa7c5a62b6b6/1ce47a45c48e4021bc6748041880d447-5ccda6ed8c85d3b04521cc916304e9b8-sd.m3u8\" type=\"application/x-mpegURL\" /\u003e\u003csource src=\"https://media001.geekbang.org/3cfba66e4a0348588f9ffa7c5a62b6b6/1ce47a45c48e4021bc6748041880d447-76a2fce3b6bc0dac6462c2f96963e357-hd.m3u8\" type=\"application/x-mpegURL\" /\u003e\u003c/video\u003e\u003c/p\u003e\n\u003cp\u003e在这门讲解浏览器工作原理的课程中，李兵会用深入浅出的讲解方式、图文并茂的展现形式，把网络、页面渲染、JavaScript、浏览器安全等知识串联起来，从而让你高质量、高效率地学习这门课程，\u003cstrong\u003e系统掌握浏览器工作原理，并同时把理论应用到前端实践中去\u003c/strong\u003e。\u003c/p\u003e\n\u003ch1\u003e模块介绍\u003c/h1\u003e\n\u003cp\u003e本课程共分为7大模块。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e1. 宏观视角下的浏览器\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e本模块通过Chrome的多进程架构来介绍HTTP请求流程、导航流程和页面的渲染流程，带你从宏观视角建立浏览器的知识体系。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e2. 浏览器中的JavaScript执行机制\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e虽然语法上和C语言很像，但是JavaScript背后的机制却又完全不同，很多人学习JavaScript时经常处于似懂非懂的状态。本模块则是站在浏览器的视角，来分析JavaScript代码的执行过程。如果你能掌握这些执行过程，那么很多诸如闭包、变量提升等疑难问题就会迎刃而解。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e3. V8工作原理\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e继续深入探讨来自Google的JavaScript引擎V8，分析其执行流程，细化讲解JavaScript中数据是如何存储和回收的。通过本模块的学习，你离打造高性能且节约内存的Web应用就更近一步了。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e4. 浏览器中的页面事件循环系统\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e要让不同类型的任务在主线程中有条不紊地执行，这就需要有一个事件循环系统，用来负责接收、调度这些不同的事件。本模块会深入探讨Web页面中的事件循环系统，讲解页面中的微任务和宏任务的实现机制，最后还会介绍一些WebAPI是如何与页面的事件循环系统结合\u0008使用的。理解事件循环，能让你从更高维度理解页面是如何运行的，并加深你对页面中异步事件的理解。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e5. 浏览器中的页面\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e页面是浏览器的核心，浏览器中的所有功能点都是服务于页面的。本模块会对页面做全面的介绍，包括构建页面的核心流程、页面性能的分析过程。最后还会介绍一些应用场景，比如流行的前端框架为什么要有虚拟DOM，最近比较火的PWA的工作原理，以及WebComponent。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e6. 浏览器中的网络\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e网络的重要性毋庸置疑，但是很多前端工程师却\u0008往往忽视它的存在。本模块通过HTTP/1、HTTP/2和HTTP/3的介绍，让你全面了解浏览器中的网络，并最终让你能向下理解其底层原理、向上理解其应用方向。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e7. 浏览器安全\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e和浏览器打交道的内容都是通过网络进行的，但通常通过网络传输的内容是不被浏览器信任的，所以对于可能存在危险的地方都要重点防护。本模块会通过实例，向你介绍为何会出现各种安全问题，以及如何避免这些安全攻击。\u003c/p\u003e\n",
+        "ucode": "3F3D3F6E20209E",
+        "is_finish": true,
+        "author": {
+          "name": "李兵",
+          "intro": "前盛大创新院高级研究员",
+          "info": "",
+          "avatar": "https://static001.geekbang.org/resource/image/59/41/5930592a22614882646c595f441dad41.jpg",
+          "brief_html": "\u003cp\u003e李兵，前盛大创新院高级研究员。李兵已经深耕浏览器和前端领域十余年，有着丰富的理论和实践经验。2008年，他基于Chromium和IE发布了第一款双核浏览器（太阳花浏览器），在没有任何宣传的情况下，日活跃用户数达到20多万；而后进入盛大创新院，参与WebOS项目，在团队中负责HTML5特性的实现；再之后，在顺网科技和团队打造了一款给全国网吧使用的“F1浏览器”，日启量达2000万。\u003c/p\u003e\n",
+          "brief": "李兵，前盛大创新院高级研究员。李兵已经深耕浏览器和前端领域十余年，有着丰富的理论和实践经验。2008年，他基于Chromium和IE发布了第一款双核浏览器（太阳花浏览器），在没有任何宣传的情况下，日活跃用户数达到20多万；而后进入盛大创新院，参与WebOS项目，在团队中负责HTML5特性的实现；再之后，在顺网科技和团队打造了一款给全国网吧使用的“F1浏览器”，日启量达2000万。\n"
+        },
+        "cover": {
+          "square": "https://static001.geekbang.org/resource/image/59/41/5930592a22614882646c595f441dad41.jpg",
+          "rectangle": "https://static001.geekbang.org/resource/image/0d/e5/0de992aa2a3fcf02e4008b0c7bf148e5.jpg",
+          "horizontal": "https://static001.geekbang.org/resource/image/33/85/d9a671e5579d160f0c56eff29b82.jpg",
+          "lecture_horizontal": "https://static001.geekbang.org/resource/image/bf/79/bf0689680eb8b552d281223cf6d6ad79.jpg",
+          "learn_horizontal": "https://static001.geekbang.org/resource/image/a6/e6/a627898f7d291d16a1f2b5012319f6e6.png",
+          "transparent": "https://static001.geekbang.org/resource/image/c0/13/c033114ded4496a2eef2d7c012f10613.png",
+          "color": "#ded1d8"
+        },
+        "article": {
+          "id": 0,
+          "count": 46,
+          "count_req": 38,
+          "count_pub": 46,
+          "total_length": 34830,
+          "first_article_id": 0,
+          "first_article_title": ""
+        },
+        "seo": { "keywords": ["浏览器", "V8原理"] },
+        "share": {
+          "title": "李兵 · 浏览器工作原理与实践",
+          "content": "透过浏览器看懂前端本质",
+          "cover": "https://static001.geekbang.org/resource/image/59/41/5930592a22614882646c595f441dad41.jpg",
+          "poster": "https://static001.geekbang.org/resource/image/6e/1b/6e9527adaaf4ad9bfc4db4bb5d6e311b.jpg"
+        },
+        "labels": [5, 37],
+        "unit": "46讲",
+        "column_type": 1,
+        "column": {
+          "unit": "46讲",
+          "bgcolor": "F6F7FB",
+          "update_frequency": "全集",
+          "is_preorder": false,
+          "is_finish": true,
+          "is_include_preview": true,
+          "show_chapter": true,
+          "is_sale_product": true,
+          "study_service": [1, 2, 3, 5],
+          "path": {
+            "desc": "你将获得：\n\n前端性能优化的底层逻辑；\n浏览器页面渲染的核心流程；\nJavaScript 运行机制解析；\n浏览器网络及安全机制解析。\n\n",
+            "desc_html": "\u003cp\u003e\u003cstrong\u003e你将获得\u003c/strong\u003e：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e前端性能优化的底层逻辑；\u003c/li\u003e\n\u003cli\u003e浏览器页面渲染的核心流程；\u003c/li\u003e\n\u003cli\u003eJavaScript 运行机制解析；\u003c/li\u003e\n\u003cli\u003e浏览器网络及安全机制解析。\u003c/li\u003e\n\u003c/ul\u003e\n"
+          },
+          "is_camp": false,
+          "catalog_pic_url": "https://static001.geekbang.org/resource/image/9b/92/9ba059d108b7e84479f2e57d90280892.jpg",
+          "recommend_articles": [
+            113513, 117637, 127495, 151370, 155183, 156181
+          ],
+          "recommend_comments": [],
+          "ranks": null,
+          "hot_comments": null,
+          "hot_lines": null,
+          "display_type": 3,
+          "intro_bg_style": 3,
+          "comment_top_ads": "",
+          "article_float_qrcode_url": "",
+          "article_float_app_qrcode_url": "",
+          "article_float_qrcode_jump": "",
+          "in_rank": false
+        },
+        "dl": {
+          "article": {
+            "id": 0,
+            "video_duration": "",
+            "video_hot": 0,
+            "could_preview": false
+          },
+          "topic_ids": []
+        },
+        "university": {
+          "total_hour": 0,
+          "term": 0,
+          "redirect_type": "",
+          "redirect_param": "",
+          "wx_qrcode": "",
+          "wx_rule": "",
+          "server_start_time": 0,
+          "lecturer_h_cover": ""
+        },
+        "opencourse": {
+          "video_bg": "",
+          "ad": {
+            "cover": "",
+            "cover_web": "",
+            "redirect_type": "",
+            "redirect_param": ""
+          },
+          "article_fav": { "aid": 0, "had_done": false, "count": 0 },
+          "author_h_cover": ""
+        },
+        "qconp": {
+          "topic_id": 0,
+          "cover_appoint": "",
+          "article": {
+            "id": 0,
+            "cover": "",
+            "video_duration": "",
+            "video_hot": 0
+          }
+        },
+        "fav_qrcode": "",
+        "extra": {
+          "sub": {
+            "count": 38112,
+            "had_done": true,
+            "could_order": true,
+            "access_mask": 64
+          },
+          "fav": { "count": 0, "had_done": false },
+          "rate": {
+            "article_count": 0,
+            "article_count_req": 0,
+            "is_finished": false,
+            "rate_percent": 0,
+            "video_seconds": 0,
+            "last_article_id": 0,
+            "last_chapter_id": 0,
+            "has_learn": false
+          },
+          "cert": { "id": "", "type": 0 },
+          "nps": {
+            "min": 19,
+            "status": 0,
+            "url": "https://jinshuju.net/f/7DTe9n"
+          },
+          "any_read": { "total": 4, "count": 0 },
+          "university": {
+            "status": 0,
+            "view_status": 0,
+            "charge_status": 0,
+            "share_renewal_status": 0,
+            "unlocked_status": 0,
+            "unlocked_chapter_ids": [],
+            "unlocked_chapter_id": 0,
+            "unlocked_chapter_title": "",
+            "unlocked_article_count": 0,
+            "unlocked_next_time": 0,
+            "expire_time": 0,
+            "is_expired": false,
+            "is_graduated": false,
+            "had_sub": false,
+            "timeline": [],
+            "has_wx_friend": false,
+            "sub_term_title": ""
+          },
+          "vip": {
+            "is_year_card": false,
+            "show": true,
+            "end_time": 1681315198
+          },
+          "appoint": { "could_do": false, "had_done": false, "count": 0 },
+          "group_buy": {
+            "success_ucount": 0,
+            "join_code": "",
+            "could_groupbuy": false,
+            "had_join": false,
+            "price": 0,
+            "list": []
+          },
+          "sharesale": {
+            "original_pic_color": "614450",
+            "original_pic_url": "https://static001.geekbang.org/render/screen/35/d9/35315f2d5ebd2551d908b3b61bec68d9.jpeg",
+            "promo_pic_color": "614450",
+            "promo_pic_url": "https://static001.geekbang.org/render/screen/35/d9/35315f2d5ebd2551d908b3b61bec68d9.jpeg",
+            "share_sale_price": 2000,
+            "share_sale_guest_price": 0
+          },
+          "promo": { "ent_time": 0 },
+          "channel": { "is": false, "back_amount": 0 },
+          "first_promo": { "price": 0, "could_join": false },
+          "coupon_promo": { "could_join": false, "price": 0 },
+          "helper": [],
+          "tab": { "comment": false },
+          "modules": [
+            {
+              "name": "gain",
+              "title": "",
+              "content": "\n前端性能优化的底层逻辑；\n浏览器页面渲染的核心流程；\nJavaScript 运行机制解析；\n浏览器网络及安全机制解析。\n\n",
+              "type": "",
+              "is_top": false
+            }
+          ],
+          "cid": 0,
+          "first_aids": [],
+          "study_plan": {
+            "id": 0,
+            "day_nums": 0,
+            "article_nums": 0,
+            "learned_week_nums": 0,
+            "status": 0
+          },
+          "cate_id": 303,
+          "cate_name": "",
+          "group_tag": { "is_recommend": false, "is_recently_learn": false },
+          "first_award": {
+            "show": false,
+            "talks": 0,
+            "reads": 0,
+            "amount": 0,
+            "expire_time": 0,
+            "redirect_type": "",
+            "redirect_param": ""
+          }
+        },
+        "available_coupons": [2631],
+        "in_pvip": 1
+      },
+      {
+        "id": 100007101,
+        "spu": 71,
+        "ctime": 1525675124,
+        "utime": 1649646300,
+        "begin_time": 1526313600,
+        "end_time": 1533657600,
+        "price": {
+          "market": 19900,
+          "sale": 19900,
+          "sale_type": 1,
+          "start_time": 0,
+          "end_time": 0
+        },
+        "is_onborad": true,
+        "is_sale": false,
+        "is_groupbuy": false,
+        "is_promo": false,
+        "is_shareget": false,
+        "is_sharesale": true,
+        "type": "c1",
+        "is_column": true,
+        "is_core": true,
+        "is_video": false,
+        "is_audio": true,
+        "is_dailylesson": false,
+        "is_university": false,
+        "is_opencourse": false,
+        "is_qconp": false,
+        "nav_id": 1,
+        "time_not_sale": 0,
+        "title": "趣谈网络协议",
+        "subtitle": "像小说一样的网络协议入门课",
+        "intro": "网络协议是每个程序员入门的必修课，但是彻底掌握并应用网络协议知识却并非易事，比如常见的TCP/IP、HTTP。网络协议的内容很基础，但基础知识不等于简单知识，更不等于不重要的知识。在网络协议的学习过程中，如果你也有过这样的感受：\n\n协议知识琐碎又枯燥，一看书就头大；\n协议内容很基础，但面试一问就“崩盘”；\n工作遇到才去查书，现学却没法现卖；\n协议知识太底层，不知道如何在热门领域应用。\n\n那么，“趣谈网络协议”专栏就是为你量身定制的。\n在本专栏中，刘超老师将结合自己从业15年的“泣血”经验，对网络协议的底层概念及其在热门领域的应用进行剖析。\n他选取了从底层到上层，最基础、最常用、最重要的网络协议进行一一解析，并将深入分析网络协议在云计算、容器和微服务等领域的应用和实践。帮助入门级程序员深入、直观地理解网络协议基础概念和原理，构建一个完整、精准的协议知识框架；帮助有一定工作经验的程序员填补知识漏洞、打通知识体系。\n专栏分为3大模块。\n\n\n底层网络协议知识详解： 将用最通俗的语言，自下而上讲解最重要、最常用以及最陌生的网络协议概念，帮你构建最精准的网络协议知识框架。\n\n\n网络协议在热门领域的应用： 将讲述网络协议在当下热门领域的应用，比如云计算、容器和微服务，并手把手带你使用新技术，进一步加深对网络协议概念的理解。\n\n\n网络协议知识串联： 将用“双十一”的故事串起网络协议的核心概念和基础知识；借助虚拟化和容器技术，搭建一个实验环境，持续更新你的知识库。\n\n\n",
+        "intro_html": "\u003cp\u003e网络协议是每个程序员入门的必修课，但是彻底掌握并应用网络协议知识却并非易事，比如常见的TCP/IP、HTTP。网络协议的内容很基础，但基础知识不等于简单知识，更不等于不重要的知识。在网络协议的学习过程中，如果你也有过这样的感受：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e协议知识琐碎又枯燥，一看书就头大；\u003c/li\u003e\n\u003cli\u003e协议内容很基础，但面试一问就“崩盘”；\u003c/li\u003e\n\u003cli\u003e工作遇到才去查书，现学却没法现卖；\u003c/li\u003e\n\u003cli\u003e协议知识太底层，不知道如何在热门领域应用。\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e那么，“趣谈网络协议”专栏就是为你量身定制的。\u003c/p\u003e\n\u003cp\u003e在本专栏中，刘超老师将结合自己从业15年的“泣血”经验，对网络协议的底层概念及其在热门领域的应用进行剖析。\u003c/p\u003e\n\u003cp\u003e他选取了从底层到上层，最基础、最常用、最重要的网络协议进行一一解析，并将深入分析网络协议在云计算、容器和微服务等领域的应用和实践。帮助入门级程序员深入、直观地理解网络协议基础概念和原理，构建一个完整、精准的协议知识框架；帮助有一定工作经验的程序员填补知识漏洞、打通知识体系。\u003c/p\u003e\n\u003cp\u003e专栏分为3大模块。\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e底层网络协议知识详解：\u003c/strong\u003e 将用最通俗的语言，自下而上讲解最重要、最常用以及最陌生的网络协议概念，帮你构建最精准的网络协议知识框架。\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e网络协议在热门领域的应用：\u003c/strong\u003e 将讲述网络协议在当下热门领域的应用，比如云计算、容器和微服务，并手把手带你使用新技术，进一步加深对网络协议概念的理解。\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e网络协议知识串联：\u003c/strong\u003e 将用“双十一”的故事串起网络协议的核心概念和基础知识；借助虚拟化和容器技术，搭建一个实验环境，持续更新你的知识库。\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n",
+        "ucode": "196BF3F499E8FE",
+        "is_finish": true,
+        "author": {
+          "name": "刘超",
+          "intro": "前网易研究院云计算技术部首席架构师",
+          "info": "",
+          "avatar": "https://static001.geekbang.org/resource/image/99/57/99f9772bb4ff0d815bb75f6812d24f57.jpg",
+          "brief_html": "\u003cp\u003e刘超，前网易研究院云计算技术部首席架构师，15年云计算领域研发及架构经验。曾在EMC做过类似GFS的分布式存储开发，做过基于Lucene的搜索引擎，并写了500页的《Lucene原理与代码分析》；在HP和华为做过OpenStack的开发、实施和解决方案；做过Hadoop运维；还创业倒腾过Mesos容器平台。\u003c/p\u003e\n",
+          "brief": "刘超，前网易研究院云计算技术部首席架构师，15年云计算领域研发及架构经验。曾在EMC做过类似GFS的分布式存储开发，做过基于Lucene的搜索引擎，并写了500页的《Lucene原理与代码分析》；在HP和华为做过OpenStack的开发、实施和解决方案；做过Hadoop运维；还创业倒腾过Mesos容器平台。\n"
+        },
+        "cover": {
+          "square": "https://static001.geekbang.org/resource/image/99/57/99f9772bb4ff0d815bb75f6812d24f57.jpg",
+          "rectangle": "https://static001.geekbang.org/resource/image/f0/d8/f0e92829a74544cf2d5e440137953dd8.jpg",
+          "horizontal": "https://static001.geekbang.org/resource/image/4e/b9/3ceb7ed7754c5c5281d348f9d7fe.jpg",
+          "lecture_horizontal": "https://static001.geekbang.org/resource/image/3e/1b/3e3fcafda125d5afe7f9dc138ba6fd1b.jpg",
+          "learn_horizontal": "https://static001.geekbang.org/resource/image/74/97/74f0178fd2b6d11fce39b75e548bae97.png",
+          "transparent": "https://static001.geekbang.org/resource/image/78/63/785365027f1388dd78821615f1ed4863.png",
+          "color": "#d8c7cd"
+        },
+        "article": {
+          "id": 0,
+          "count": 51,
+          "count_req": 42,
+          "count_pub": 51,
+          "total_length": 44120,
+          "first_article_id": 0,
+          "first_article_title": ""
+        },
+        "seo": { "keywords": ["网络协议", "网络编程"] },
+        "share": {
+          "title": "刘超 · 趣谈网络协议",
+          "content": "像小说一样的网络协议入门课",
+          "cover": "https://static001.geekbang.org/resource/image/99/57/99f9772bb4ff0d815bb75f6812d24f57.jpg",
+          "poster": "https://static001.geekbang.org/resource/image/30/d9/30a23f3b667b3809b2c3fe578b220dd9.jpg"
+        },
+        "labels": [9, 40, 5, 76],
+        "unit": "51讲",
+        "column_type": 1,
+        "column": {
+          "unit": "51讲",
+          "bgcolor": "ccbac0",
+          "update_frequency": "全集",
+          "is_preorder": false,
+          "is_finish": true,
+          "is_include_preview": true,
+          "show_chapter": true,
+          "is_sale_product": true,
+          "study_service": [1, 2, 3, 5, 8, 12, 14],
+          "path": {
+            "desc": "你将获得：\n\n\n掌握网络协议的知识框架；\n\n\n应对大厂面试的协议难题；\n\n\n驾驭网络协议的实用场景。\n\n\n",
+            "desc_html": "\u003cp\u003e\u003cstrong\u003e你将获得\u003c/strong\u003e：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e掌握网络协议的知识框架；\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e应对大厂面试的协议难题；\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e驾驭网络协议的实用场景。\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n"
+          },
+          "is_camp": false,
+          "catalog_pic_url": "https://static001.geekbang.org/resource/image/1a/0a/1a17f945f721b4a18a84e540c70f580a.jpg",
+          "recommend_articles": [7581, 7772, 8015, 8975, 9492, 14381],
+          "recommend_comments": [],
+          "ranks": null,
+          "hot_comments": null,
+          "hot_lines": null,
+          "display_type": 3,
+          "intro_bg_style": 3,
+          "comment_top_ads": "",
+          "article_float_qrcode_url": "https://static001.geekbang.org/resource/image/93/81/934f5fd1fa7353c4cc329c94a052b481.jpg",
+          "article_float_app_qrcode_url": "",
+          "article_float_qrcode_jump": "https://time.geekbang.org/serv/v4/misc/jump?uri=https%3A%2F%2Ftime.geekbang.org%2Fhybrid%2Fmp%2Fjump%3Furl%3Dhttps%253A%252F%252Fstatic001.geekbang.org%252Fresource%252Fimage%252Fa3%252F2d%252Fa32289253c6db286d35e9d9561b14e2d.jpg",
+          "in_rank": true
+        },
+        "dl": {
+          "article": {
+            "id": 0,
+            "video_duration": "",
+            "video_hot": 0,
+            "could_preview": false
+          },
+          "topic_ids": []
+        },
+        "university": {
+          "total_hour": 0,
+          "term": 0,
+          "redirect_type": "",
+          "redirect_param": "",
+          "wx_qrcode": "",
+          "wx_rule": "",
+          "server_start_time": 0,
+          "lecturer_h_cover": ""
+        },
+        "opencourse": {
+          "video_bg": "",
+          "ad": {
+            "cover": "",
+            "cover_web": "",
+            "redirect_type": "",
+            "redirect_param": ""
+          },
+          "article_fav": { "aid": 0, "had_done": false, "count": 0 },
+          "author_h_cover": ""
+        },
+        "qconp": {
+          "topic_id": 0,
+          "cover_appoint": "",
+          "article": {
+            "id": 0,
+            "cover": "",
+            "video_duration": "",
+            "video_hot": 0
+          }
+        },
+        "fav_qrcode": "",
+        "extra": {
+          "sub": {
+            "count": 105355,
+            "had_done": true,
+            "could_order": true,
+            "access_mask": 64
+          },
+          "fav": { "count": 0, "had_done": false },
+          "rate": {
+            "article_count": 0,
+            "article_count_req": 0,
+            "is_finished": false,
+            "rate_percent": 0,
+            "video_seconds": 0,
+            "last_article_id": 0,
+            "last_chapter_id": 0,
+            "has_learn": false
+          },
+          "cert": { "id": "", "type": 0 },
+          "nps": {
+            "min": 21,
+            "status": 0,
+            "url": "https://jinshuju.net/f/EaDpyD"
+          },
+          "any_read": { "total": 4, "count": 0 },
+          "university": {
+            "status": 0,
+            "view_status": 0,
+            "charge_status": 0,
+            "share_renewal_status": 0,
+            "unlocked_status": 0,
+            "unlocked_chapter_ids": [],
+            "unlocked_chapter_id": 0,
+            "unlocked_chapter_title": "",
+            "unlocked_article_count": 0,
+            "unlocked_next_time": 0,
+            "expire_time": 0,
+            "is_expired": false,
+            "is_graduated": false,
+            "had_sub": false,
+            "timeline": [],
+            "has_wx_friend": false,
+            "sub_term_title": ""
+          },
+          "vip": {
+            "is_year_card": false,
+            "show": true,
+            "end_time": 1681315198
+          },
+          "appoint": { "could_do": false, "had_done": false, "count": 0 },
+          "group_buy": {
+            "success_ucount": 0,
+            "join_code": "",
+            "could_groupbuy": false,
+            "had_join": false,
+            "price": 0,
+            "list": []
+          },
+          "sharesale": {
+            "original_pic_color": "311F2B",
+            "original_pic_url": "https://static001.geekbang.org/render/screen/e9/c2/e9edb7c38fc2e0c8f2d1b1a80990bdc2.jpeg",
+            "promo_pic_color": "311F2B",
+            "promo_pic_url": "https://static001.geekbang.org/render/screen/e9/c2/e9edb7c38fc2e0c8f2d1b1a80990bdc2.jpeg",
+            "share_sale_price": 2400,
+            "share_sale_guest_price": 0
+          },
+          "promo": { "ent_time": 0 },
+          "channel": { "is": false, "back_amount": 0 },
+          "first_promo": { "price": 0, "could_join": false },
+          "coupon_promo": { "could_join": false, "price": 0 },
+          "helper": [],
+          "tab": { "comment": false },
+          "modules": [
+            {
+              "name": "gain",
+              "title": "",
+              "content": "\n掌握网络协议的知识框架；\n应对大厂面试的协议难题；\n驾驭网络协议的实用场景。\n\n",
+              "type": "",
+              "is_top": false
+            }
+          ],
+          "cid": 0,
+          "first_aids": [],
+          "study_plan": {
+            "id": 0,
+            "day_nums": 0,
+            "article_nums": 0,
+            "learned_week_nums": 0,
+            "status": 0
+          },
+          "cate_id": 303,
+          "cate_name": "",
+          "group_tag": { "is_recommend": false, "is_recently_learn": false },
+          "first_award": {
+            "show": false,
+            "talks": 0,
+            "reads": 0,
+            "amount": 0,
+            "expire_time": 0,
+            "redirect_type": "",
+            "redirect_param": ""
+          }
+        },
+        "available_coupons": [2632],
+        "in_pvip": 1
+      },
+      {
+        "id": 100026801,
+        "spu": 268,
+        "ctime": 1556262573,
+        "utime": 1649646230,
+        "begin_time": 1556208000,
+        "end_time": 1871827200,
+        "price": {
+          "market": 19900,
+          "sale": 19900,
+          "sale_type": 1,
+          "start_time": 0,
+          "end_time": 0
+        },
+        "is_onborad": true,
+        "is_sale": false,
+        "is_groupbuy": false,
+        "is_promo": false,
+        "is_shareget": false,
+        "is_sharesale": true,
+        "type": "c3",
+        "is_column": true,
+        "is_core": true,
+        "is_video": true,
+        "is_audio": false,
+        "is_dailylesson": false,
+        "is_university": false,
+        "is_opencourse": false,
+        "is_qconp": false,
+        "nav_id": 2,
+        "time_not_sale": 0,
+        "title": "Web协议详解与抓包实战",
+        "subtitle": "系统掌握Web协议，高效解决网络难题",
+        "intro": "不少工程师在工作中多多少少都会遇到下面的困惑，比如：\n\nAJAX 跨域访问时总被浏览器的同源策略阻止，其背后的原理及符合其设计思想的解决方案是什么？\n当我们维护 HTTPS 连接时，如果要优化 TLS/SSL 的卸载性能，应该从哪里入手？\n定位问题时，发现本地的 TCP 连接状态中出现了FIN_WAIT、CLOSE_WAIT 或者 TIME_WAIT，都是什么原因引起的？应该怎样解决？\n想要提升TCP连接的传输速度，可服务器上相关的系统参数多达数十个，究竟该怎么调整？\n\n你会发现，这些问题其实都和 Web 协议密切相关。无论你是前后端工程师，还是运维测试，如果想面试更高的职位，或者要站在更高的角度去理解技术业务架构，并能在问题出现时快速、高效地解决问题，Web 协议一定是你绕不过去的一道坎。\n因此，我们和陶辉老师合作推出了这门课程，旨在帮助你对各种常用 Web 协议有一个系统、深度的理解，在此基础上你将能够快速定位和解决工作中的各种网络疑难杂症，同时也为后续进行更复杂、难度更高的分布式系统架构设计等工作打下坚实的基础。\n\n覆盖全面：内容包含 HTTP/1.1、HTTP/2、WebSocket、TLS/SSL以及TCP/IP等工作中常用的 Web 协议，将各个零散的知识点组织成体系化的内容。\n抓包实战：不光有理论讲解，关键知识点会配合相应的抓包工具进行演示，帮你更轻松地搞懂各种协议的抽象细节，从而在工作中快速定位和解决各种网络疑难杂症。\n自顶向下：先从应用层协议讲起(HTTP)，让你带着具体问题去进行有针对性的学习，最后会逐步过渡到底层的 IP 协议，这样你就能从更高的层面理解Web协议的体系架构。\n适用广泛：无论是前后端工程师、运维测试工程师还是架构师，只要是工作中经常要和网络打交道的技术人员，都可以学习这门课程。\n\n",
+        "intro_html": "\u003cp\u003e不少工程师在工作中多多少少都会遇到下面的困惑，比如：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eAJAX 跨域访问时总被浏览器的同源策略阻止，其背后的原理及符合其设计思想的解决方案是什么？\u003c/li\u003e\n\u003cli\u003e当我们维护 HTTPS 连接时，如果要优化 TLS/SSL 的卸载性能，应该从哪里入手？\u003c/li\u003e\n\u003cli\u003e定位问题时，发现本地的 TCP 连接状态中出现了FIN_WAIT、CLOSE_WAIT 或者 TIME_WAIT，都是什么原因引起的？应该怎样解决？\u003c/li\u003e\n\u003cli\u003e想要提升TCP连接的传输速度，可服务器上相关的系统参数多达数十个，究竟该怎么调整？\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e你会发现，这些问题其实都和 Web 协议密切相关。无论你是前后端工程师，还是运维测试，如果想面试更高的职位，或者要站在更高的角度去理解技术业务架构，并能在问题出现时快速、高效地解决问题，Web 协议一定是你绕不过去的一道坎。\u003c/p\u003e\n\u003cp\u003e因此，我们和陶辉老师合作推出了这门课程，旨在帮助你对各种常用 Web 协议有一个系统、深度的理解，在此基础上你将能够快速定位和解决工作中的各种网络疑难杂症，同时也为后续进行更复杂、难度更高的分布式系统架构设计等工作打下坚实的基础。\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan class=\"orange\"\u003e覆盖全面：\u003c/span\u003e内容包含 HTTP/1.1、HTTP/2、WebSocket、TLS/SSL以及TCP/IP等工作中常用的 Web 协议，将各个零散的知识点组织成体系化的内容。\u003c/li\u003e\n\u003cli\u003e\u003cspan class=\"orange\"\u003e抓包实战：\u003c/span\u003e不光有理论讲解，关键知识点会配合相应的抓包工具进行演示，帮你更轻松地搞懂各种协议的抽象细节，从而在工作中快速定位和解决各种网络疑难杂症。\u003c/li\u003e\n\u003cli\u003e\u003cspan class=\"orange\"\u003e自顶向下：\u003c/span\u003e先从应用层协议讲起(HTTP)，让你带着具体问题去进行有针对性的学习，最后会逐步过渡到底层的 IP 协议，这样你就能从更高的层面理解Web协议的体系架构。\u003c/li\u003e\n\u003cli\u003e\u003cspan class=\"orange\"\u003e适用广泛：\u003c/span\u003e无论是前后端工程师、运维测试工程师还是架构师，只要是工作中经常要和网络打交道的技术人员，都可以学习这门课程。\u003c/li\u003e\n\u003c/ul\u003e\n",
+        "ucode": "F81A9087435953",
+        "is_finish": true,
+        "author": {
+          "name": "陶辉",
+          "intro": "智链达CTO，前阿里云高级技术专家",
+          "info": "",
+          "avatar": "https://static001.geekbang.org/resource/image/04/0a/0430f8402be85def96111b2d4950290a.jpg",
+          "brief_html": "\u003cp\u003e陶辉，杭州智链达数据有限公司 CTO 兼联合创始人，著有《深入理解 Nginx：模块开发与架构解析》一书。\u003c/p\u003e\n\u003cp\u003e10 余年互联网一线工作经验，曾任职于阿里巴巴、华为、腾讯、思科等知名企业，毕业于西安交通大学计算机科学与技术专业，擅长 Linux 下高性能服务器的开发，以及分布式环境下海量数据存储的设计开发。\u003c/p\u003e\n\u003cp\u003e曾在华为中央软件部参与 iMAP 网管系统的研发，熟悉网络设备的工作流程；在腾讯QQ空间部门使用自定义的 Qzone 协议传递巨量数据，对如何设计出高性能、可扩展的应用协议有丰富的实践经验；在思科从事 Nginx 服务的研发，对 Web 服务器如何高效地处理 HTTP 协议有全面的认识；在阿里云担任 VPC 网络、ECS管理与存储系统重构的架构师，对公有云及 IDC 内部网络系统有深刻了解。\u003c/p\u003e\n",
+          "brief": "陶辉，杭州智链达数据有限公司 CTO 兼联合创始人，著有《深入理解 Nginx：模块开发与架构解析》一书。\n10 余年互联网一线工作经验，曾任职于阿里巴巴、华为、腾讯、思科等知名企业，毕业于西安交通大学计算机科学与技术专业，擅长 Linux 下高性能服务器的开发，以及分布式环境下海量数据存储的设计开发。\n曾在华为中央软件部参与 iMAP 网管系统的研发，熟悉网络设备的工作流程；在腾讯QQ空间部门使用自定义的 Qzone 协议传递巨量数据，对如何设计出高性能、可扩展的应用协议有丰富的实践经验；在思科从事 Nginx 服务的研发，对 Web 服务器如何高效地处理 HTTP 协议有全面的认识；在阿里云担任 VPC 网络、ECS管理与存储系统重构的架构师，对公有云及 IDC 内部网络系统有深刻了解。\n"
+        },
+        "cover": {
+          "square": "https://static001.geekbang.org/resource/image/04/0a/0430f8402be85def96111b2d4950290a.jpg",
+          "rectangle": "https://static001.geekbang.org/resource/image/c3/f3/c3fb6f715d3296938cef627d983dd6f3.png",
+          "horizontal": "https://static001.geekbang.org/resource/image/6a/18/18e34ce569d06613549a5bd20545.jpg",
+          "lecture_horizontal": "https://static001.geekbang.org/resource/image/cf/6d/cf98743409df276e2dce76631dd1a56d.jpg",
+          "learn_horizontal": "https://static001.geekbang.org/resource/image/61/20/61f9a126e349fddfa28e4664f957e920.png",
+          "transparent": "https://static001.geekbang.org/resource/image/47/1c/47f2589e91f68368a4d4dc15986fde1c.png",
+          "color": "#b9cade"
+        },
+        "article": {
+          "id": 0,
+          "count": 121,
+          "count_req": 121,
+          "count_pub": 121,
+          "total_length": 64427,
+          "first_article_id": 0,
+          "first_article_title": ""
+        },
+        "seo": { "keywords": ["抓包", "wireshark"] },
+        "share": {
+          "title": "陶辉 · Web协议详解与抓包实战",
+          "content": "系统掌握Web协议，高效解决网络难题",
+          "cover": "https://static001.geekbang.org/resource/image/04/0a/0430f8402be85def96111b2d4950290a.jpg",
+          "poster": ""
+        },
+        "labels": [5, 40, 37, 32, 76, 9],
+        "unit": "121讲",
+        "column_type": 3,
+        "column": {
+          "unit": "121讲",
+          "bgcolor": "FFFFFF",
+          "update_frequency": "全集",
+          "is_preorder": false,
+          "is_finish": true,
+          "is_include_preview": true,
+          "show_chapter": true,
+          "is_sale_product": true,
+          "study_service": [1, 2, 3, 5],
+          "path": {
+            "desc": "你将获得：\n\n深入理解常用 Web 协议；\n快速定位和解决网络疑难杂症；\n掌握常见抓包工具及报文分析方法；\n熟悉 Web 协议的架构和设计原则。\n\n",
+            "desc_html": "\u003cp\u003e\u003cstrong\u003e你将获得\u003c/strong\u003e：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e深入理解常用 Web 协议；\u003c/li\u003e\n\u003cli\u003e快速定位和解决网络疑难杂症；\u003c/li\u003e\n\u003cli\u003e掌握常见抓包工具及报文分析方法；\u003c/li\u003e\n\u003cli\u003e熟悉 Web 协议的架构和设计原则。\u003c/li\u003e\n\u003c/ul\u003e\n"
+          },
+          "is_camp": false,
+          "catalog_pic_url": "",
+          "recommend_articles": null,
+          "recommend_comments": [172491, 154890],
+          "ranks": null,
+          "hot_comments": null,
+          "hot_lines": null,
+          "display_type": 3,
+          "intro_bg_style": 3,
+          "comment_top_ads": "",
+          "article_float_qrcode_url": "",
+          "article_float_app_qrcode_url": "",
+          "article_float_qrcode_jump": "",
+          "in_rank": false
+        },
+        "dl": {
+          "article": {
+            "id": 0,
+            "video_duration": "",
+            "video_hot": 0,
+            "could_preview": false
+          },
+          "topic_ids": []
+        },
+        "university": {
+          "total_hour": 0,
+          "term": 0,
+          "redirect_type": "",
+          "redirect_param": "",
+          "wx_qrcode": "",
+          "wx_rule": "",
+          "server_start_time": 0,
+          "lecturer_h_cover": ""
+        },
+        "opencourse": {
+          "video_bg": "",
+          "ad": {
+            "cover": "",
+            "cover_web": "",
+            "redirect_type": "",
+            "redirect_param": ""
+          },
+          "article_fav": { "aid": 0, "had_done": false, "count": 0 },
+          "author_h_cover": ""
+        },
+        "qconp": {
+          "topic_id": 0,
+          "cover_appoint": "",
+          "article": {
+            "id": 0,
+            "cover": "",
+            "video_duration": "",
+            "video_hot": 0
+          }
+        },
+        "fav_qrcode": "",
+        "extra": {
+          "sub": {
+            "count": 31343,
+            "had_done": false,
+            "could_order": true,
+            "access_mask": 0
+          },
+          "fav": { "count": 0, "had_done": false },
+          "rate": {
+            "article_count": 0,
+            "article_count_req": 0,
+            "is_finished": false,
+            "rate_percent": 0,
+            "video_seconds": 0,
+            "last_article_id": 0,
+            "last_chapter_id": 0,
+            "has_learn": false
+          },
+          "cert": { "id": "", "type": 0 },
+          "nps": {
+            "min": 61,
+            "status": 0,
+            "url": "https://jinshuju.net/f/shcGcm"
+          },
+          "any_read": { "total": 0, "count": 0 },
+          "university": {
+            "status": 0,
+            "view_status": 0,
+            "charge_status": 0,
+            "share_renewal_status": 0,
+            "unlocked_status": 0,
+            "unlocked_chapter_ids": [],
+            "unlocked_chapter_id": 0,
+            "unlocked_chapter_title": "",
+            "unlocked_article_count": 0,
+            "unlocked_next_time": 0,
+            "expire_time": 0,
+            "is_expired": false,
+            "is_graduated": false,
+            "had_sub": false,
+            "timeline": [],
+            "has_wx_friend": false,
+            "sub_term_title": ""
+          },
+          "vip": { "is_year_card": false, "show": false, "end_time": -1 },
+          "appoint": { "could_do": false, "had_done": false, "count": 0 },
+          "group_buy": {
+            "success_ucount": 0,
+            "join_code": "",
+            "could_groupbuy": false,
+            "had_join": false,
+            "price": 0,
+            "list": []
+          },
+          "sharesale": {
+            "original_pic_color": "2F4D79",
+            "original_pic_url": "https://static001.geekbang.org/render/screen/49/7d/49d9e84eec24f6ba5c1f1faf3594d87d.jpeg",
+            "promo_pic_color": "2F4D79",
+            "promo_pic_url": "https://static001.geekbang.org/render/screen/49/7d/49d9e84eec24f6ba5c1f1faf3594d87d.jpeg",
+            "share_sale_price": 2400,
+            "share_sale_guest_price": 0
+          },
+          "promo": { "ent_time": 0 },
+          "channel": { "is": false, "back_amount": 0 },
+          "first_promo": { "price": 0, "could_join": false },
+          "coupon_promo": { "could_join": false, "price": 0 },
+          "helper": [],
+          "tab": { "comment": false },
+          "modules": [
+            {
+              "name": "gain",
+              "title": "",
+              "content": "\n深入理解常用 Web 协议；\n快速定位和解决网络疑难杂症；\n掌握常见抓包工具及报文分析方法；\n熟悉 Web 协议的架构和设计原则。\n\n",
+              "type": "",
+              "is_top": false
+            }
+          ],
+          "cid": 0,
+          "first_aids": [],
+          "study_plan": {
+            "id": 0,
+            "day_nums": 0,
+            "article_nums": 0,
+            "learned_week_nums": 0,
+            "status": 0
+          },
+          "cate_id": 320,
+          "cate_name": "",
+          "group_tag": { "is_recommend": false, "is_recently_learn": false },
+          "first_award": {
+            "show": false,
+            "talks": 0,
+            "reads": 0,
+            "amount": 0,
+            "expire_time": 0,
+            "redirect_type": "",
+            "redirect_param": ""
+          }
+        },
+        "available_coupons": [2632],
+        "in_pvip": 0
+      },
+      {
+        "id": 100002201,
+        "spu": 22,
+        "ctime": 1505908992,
+        "utime": 1649646302,
+        "begin_time": 1507564800,
+        "end_time": 1539014400,
+        "price": {
+          "market": 39900,
+          "sale": 39900,
+          "sale_type": 1,
+          "start_time": 0,
+          "end_time": 0
+        },
+        "is_onborad": true,
+        "is_sale": false,
+        "is_groupbuy": false,
+        "is_promo": false,
+        "is_shareget": false,
+        "is_sharesale": true,
+        "type": "c1",
+        "is_column": true,
+        "is_core": true,
+        "is_video": false,
+        "is_audio": true,
+        "is_dailylesson": false,
+        "is_university": false,
+        "is_opencourse": false,
+        "is_qconp": false,
+        "nav_id": 1,
+        "time_not_sale": 0,
+        "title": "左耳听风",
+        "subtitle": "洞悉技术的本质，享受科技的乐趣",
+        "intro": "在这个付费专栏中，除了继续保持观点鲜明的行文风格，左耳朵耗子还会分享一些与个人或企业切身利益更为相关的内容，或者说更具指导性、更有商业价值的东西。\n下面是他在开篇词中的自述：\n第一部分：技术\n对于技术方面，我不会写太多关于知识点的东西，因为这些知识点你可以自行 Google 可以 RTFM。我要写的一定是以体系化的，而且要能直达技术的本质。入行这 20 年来，我最擅长的就是架构和开发各种大规模的系统，所以，我会有 2-3 个和分布式系统相关的系列文章。\n第二部分：成长\n成长在过去这 20 年中，我感觉到，很多人都非常在意自己的成长。所以，我会分享一堆我亲身经历的，也是我自己实验的与个人发展相关的文章。比如，如何利用技术变现、如何面试、如何选择新的技术、如何学习、如何管理自己的时间、如何管理自己的老板和工作、如何成为一个 Leader……这些东西一定会对你有用。\n第三部分：管理\n这些年，我觉得做好技术工作的前提是，得做好技术的管理工作。只有管理好了软件工程和技术团队，技术才能发挥出最大的潜力。大多数的技术问题都是管理上的问题。所以，我会写上一系列的和管理相关的文章，涵盖管理三个要素：团队、项目和管理者自己。比如，人员招聘、绩效考核、提升士气、解决冲突、面对变化、沟通说服、项目管理、任务排期、会议、远程管理，等等。\n",
+        "intro_html": "\u003cp\u003e在这个付费专栏中，除了继续保持观点鲜明的行文风格，左耳朵耗子还会分享一些与个人或企业切身利益更为相关的内容，或者说更具指导性、更有商业价值的东西。\u003c/p\u003e\n\u003cp\u003e下面是他在开篇词中的自述：\u003c/p\u003e\n\u003cp\u003e第一部分：技术\u003c/p\u003e\n\u003cp\u003e对于技术方面，我不会写太多关于知识点的东西，因为这些知识点你可以自行 Google 可以 RTFM。我要写的一定是以体系化的，而且要能直达技术的本质。入行这 20 年来，我最擅长的就是架构和开发各种大规模的系统，所以，我会有 2-3 个和分布式系统相关的系列文章。\u003c/p\u003e\n\u003cp\u003e第二部分：成长\u003c/p\u003e\n\u003cp\u003e成长在过去这 20 年中，我感觉到，很多人都非常在意自己的成长。所以，我会分享一堆我亲身经历的，也是我自己实验的与个人发展相关的文章。比如，如何利用技术变现、如何面试、如何选择新的技术、如何学习、如何管理自己的时间、如何管理自己的老板和工作、如何成为一个 Leader……这些东西一定会对你有用。\u003c/p\u003e\n\u003cp\u003e第三部分：管理\u003c/p\u003e\n\u003cp\u003e这些年，我觉得做好技术工作的前提是，得做好技术的管理工作。只有管理好了软件工程和技术团队，技术才能发挥出最大的潜力。大多数的技术问题都是管理上的问题。所以，我会写上一系列的和管理相关的文章，涵盖管理三个要素：团队、项目和管理者自己。比如，人员招聘、绩效考核、提升士气、解决冲突、面对变化、沟通说服、项目管理、任务排期、会议、远程管理，等等。\u003c/p\u003e\n",
+        "ucode": "8A4741D677702E",
+        "is_finish": true,
+        "author": {
+          "name": "陈皓",
+          "intro": "网名“左耳朵耗子”，资深技术专家，骨灰级程序员",
+          "info": "",
+          "avatar": "https://static001.geekbang.org/resource/image/21/da/216b472de3f9027371576e107601c2da.jpg",
+          "brief_html": "\u003cp\u003e陈皓，人称耗子叔，是一位四十多岁的中年老男人，体型肥胖，白发苍苍，观点鲜明，个性十足。\u003c/p\u003e\n\u003cp\u003e他有20年软件开发及相关工作经验，先后在阿里巴巴、亚马逊、汤森路透等知名公司任职，对IT底层技术平台有深入的了解，尤其在大规模分布式系统的基础架构方面颇有研究。此外，他在团队管理、项目管理，以及程序员个人成长等方面也有自己一套独特的见解和方法。\u003c/p\u003e\n\u003cp\u003e\u003cvideo poster=\"https://static001.geekbang.org/resource/image/c5/4c/c52eea577fcea564ca935d30aa80034c.jpg\" preload=\"none\" controls\u003e\u003csource src=\"https://res001.geekbang.org/resource/video/81/74/81b0fce204ea5f07ca7b4f3f65066274.mp4\" type=\"video/mp4\" /\u003e\u003csource src=\"https://res001.geekbang.org/media/video/81/74/81b0fce204ea5f07ca7b4f3f65066274/sd.m3u8\" type=\"application/x-mpegURL\" /\u003e\u003c/video\u003e\u003c/p\u003e\n\u003cp\u003e从2002年开始写技术博客，到2009年左右在独立域名 CoolShell.cn（酷壳）上分享技术观点和实践总结，陈皓通过一篇篇观点鲜明、文风犀利的文章吸引了大量IT从业人员的关注，影响了成千上万程序员在技术选型、求职就业、个人成长等方面的思考和发展。\u003c/p\u003e\n\u003cp\u003e虽然有些会被读者认同，有些则会引来争议，但他一直坚持观点鲜明的写作风格，并希望这些观点能引起大家的讨论和点评。他认为，只有这样，分享才更有意义，也能让大家都能从中收获更多。\u003c/p\u003e\n\u003cp\u003e除了继续保持观点鲜明、犀利的行文风格，在“左耳听风”专栏中的每篇文章都是陈皓对自己多年“堵过的枪眼儿”“填过的坑儿”的深入思考和凝练，是一些与个人或企业切身利益相关的内容，或者说是更具指导性、更为商业化的内容。用他自己的话说，是一些非常来之不易的宝贵经验。\u003c/p\u003e\n",
+          "brief": "陈皓，人称耗子叔，是一位四十多岁的中年老男人，体型肥胖，白发苍苍，观点鲜明，个性十足。\n他有20年软件开发及相关工作经验，先后在阿里巴巴、亚马逊、汤森路透等知名公司任职，对IT底层技术平台有深入的了解，尤其在大规模分布式系统的基础架构方面颇有研究。此外，他在团队管理、项目管理，以及程序员个人成长等方面也有自己一套独特的见解和方法。\n\n从2002年开始写技术博客，到2009年左右在独立域名 CoolShell.cn（酷壳）上分享技术观点和实践总结，陈皓通过一篇篇观点鲜明、文风犀利的文章吸引了大量IT从业人员的关注，影响了成千上万程序员在技术选型、求职就业、个人成长等方面的思考和发展。\n虽然有些会被读者认同，有些则会引来争议，但他一直坚持观点鲜明的写作风格，并希望这些观点能引起大家的讨论和点评。他认为，只有这样，分享才更有意义，也能让大家都能从中收获更多。\n除了继续保持观点鲜明、犀利的行文风格，在“左耳听风”专栏中的每篇文章都是陈皓对自己多年“堵过的枪眼儿”“填过的坑儿”的深入思考和凝练，是一些与个人或企业切身利益相关的内容，或者说是更具指导性、更为商业化的内容。用他自己的话说，是一些非常来之不易的宝贵经验。\n"
+        },
+        "cover": {
+          "square": "https://static001.geekbang.org/resource/image/21/da/216b472de3f9027371576e107601c2da.jpg",
+          "rectangle": "https://static001.geekbang.org/resource/image/19/f5/1968c1f06723479ae9771dbf54a1c7f5.jpg",
+          "horizontal": "https://static001.geekbang.org/resource/image/dc/77/43543a22664df67768f71df94ac0.jpg",
+          "lecture_horizontal": "https://static001.geekbang.org/resource/image/03/1d/03173ebb07347b3bcaf8557f24ed4e1d.jpg",
+          "learn_horizontal": "https://static001.geekbang.org/resource/image/15/08/157ffbbdabe2315de5dffd46d394e308.png",
+          "transparent": "https://static001.geekbang.org/resource/image/d8/ed/d8ae4c5b482e0420f1da9a993fec7aed.png",
+          "color": "#bfccd4"
+        },
+        "article": {
+          "id": 0,
+          "count": 119,
+          "count_req": 102,
+          "count_pub": 119,
+          "total_length": 88087,
+          "first_article_id": 0,
+          "first_article_title": ""
+        },
+        "seo": { "keywords": ["分布式", "酷壳"] },
+        "share": {
+          "title": "陈皓 · 左耳听风",
+          "content": "左耳朵耗子的专栏，20年骨灰级程序员，专栏涵盖程序员练级攻略、全栈程序员的体系化学习路线与进阶底图。专栏已有32000人加入学习，可以说是程序员必备宝典。",
+          "cover": "https://static001.geekbang.org/resource/image/21/da/216b472de3f9027371576e107601c2da.jpg",
+          "poster": "https://static001.geekbang.org/resource/image/08/c1/084b2e8b8757ccb8401d6e6501ef8bc1.jpg"
+        },
+        "labels": [3, 10, 11, 12, 13, 17, 20, 22, 23],
+        "unit": "119讲",
+        "column_type": 1,
+        "column": {
+          "unit": "119讲",
+          "bgcolor": "6091b2",
+          "update_frequency": "全集",
+          "is_preorder": false,
+          "is_finish": true,
+          "is_include_preview": true,
+          "show_chapter": true,
+          "is_sale_product": true,
+          "study_service": [1, 2, 3, 5],
+          "path": {
+            "desc": "你将获得：\n\n主流语言编程范式详解；\n分布式系统关键技术剖析；\n程序员练级攻略；\n高效学习的方法以及面试经验。\n\n",
+            "desc_html": "\u003cp\u003e\u003cstrong\u003e你将获得\u003c/strong\u003e：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e主流语言编程范式详解；\u003c/li\u003e\n\u003cli\u003e分布式系统关键技术剖析；\u003c/li\u003e\n\u003cli\u003e程序员练级攻略；\u003c/li\u003e\n\u003cli\u003e高效学习的方法以及面试经验。\u003c/li\u003e\n\u003c/ul\u003e\n"
+          },
+          "is_camp": false,
+          "catalog_pic_url": "https://static001.geekbang.org/resource/image/7f/7b/7f428c8dd8f26668a727bd46227ec17b.jpg",
+          "recommend_articles": [291, 2017, 2080, 5363, 11232, 14271],
+          "recommend_comments": [],
+          "ranks": null,
+          "hot_comments": null,
+          "hot_lines": null,
+          "display_type": 3,
+          "intro_bg_style": 2,
+          "comment_top_ads": "",
+          "article_float_qrcode_url": "https://static001.geekbang.org/resource/image/6e/b2/6ea29233e80e497yyc75d087594b61b2.png",
+          "article_float_app_qrcode_url": "",
+          "article_float_qrcode_jump": "https://time.geekbang.org/serv/v4/misc/jump?uri=https%3A%2F%2Ftime.geekbang.org%2Fhybrid%2Fmp%2Fjump%3Furl%3Dhttps%253A%252F%252Fstatic001.geekbang.org%252Fresource%252Fimage%252F82%252Fe2%252F82476b1d06084c29dd0bf8dc276cb6e2.png",
+          "in_rank": true
+        },
+        "dl": {
+          "article": {
+            "id": 0,
+            "video_duration": "",
+            "video_hot": 0,
+            "could_preview": false
+          },
+          "topic_ids": []
+        },
+        "university": {
+          "total_hour": 0,
+          "term": 0,
+          "redirect_type": "",
+          "redirect_param": "",
+          "wx_qrcode": "",
+          "wx_rule": "",
+          "server_start_time": 0,
+          "lecturer_h_cover": ""
+        },
+        "opencourse": {
+          "video_bg": "",
+          "ad": {
+            "cover": "",
+            "cover_web": "",
+            "redirect_type": "",
+            "redirect_param": ""
+          },
+          "article_fav": { "aid": 0, "had_done": false, "count": 0 },
+          "author_h_cover": ""
+        },
+        "qconp": {
+          "topic_id": 0,
+          "cover_appoint": "",
+          "article": {
+            "id": 0,
+            "cover": "",
+            "video_duration": "",
+            "video_hot": 0
+          }
+        },
+        "fav_qrcode": "",
+        "extra": {
+          "sub": {
+            "count": 148306,
+            "had_done": false,
+            "could_order": true,
+            "access_mask": 0
+          },
+          "fav": { "count": 0, "had_done": false },
+          "rate": {
+            "article_count": 0,
+            "article_count_req": 0,
+            "is_finished": false,
+            "rate_percent": 0,
+            "video_seconds": 0,
+            "last_article_id": 0,
+            "last_chapter_id": 0,
+            "has_learn": false
+          },
+          "cert": { "id": "", "type": 0 },
+          "nps": {
+            "min": 51,
+            "status": 0,
+            "url": "https://jinshuju.net/f/R4P5ZU"
+          },
+          "any_read": { "total": 6, "count": 0 },
+          "university": {
+            "status": 0,
+            "view_status": 0,
+            "charge_status": 0,
+            "share_renewal_status": 0,
+            "unlocked_status": 0,
+            "unlocked_chapter_ids": [],
+            "unlocked_chapter_id": 0,
+            "unlocked_chapter_title": "",
+            "unlocked_article_count": 0,
+            "unlocked_next_time": 0,
+            "expire_time": 0,
+            "is_expired": false,
+            "is_graduated": false,
+            "had_sub": false,
+            "timeline": [],
+            "has_wx_friend": false,
+            "sub_term_title": ""
+          },
+          "vip": { "is_year_card": false, "show": false, "end_time": -1 },
+          "appoint": { "could_do": false, "had_done": false, "count": 0 },
+          "group_buy": {
+            "success_ucount": 0,
+            "join_code": "",
+            "could_groupbuy": false,
+            "had_join": false,
+            "price": 0,
+            "list": []
+          },
+          "sharesale": {
+            "original_pic_color": "FFFFFF",
+            "original_pic_url": "https://static001.geekbang.org/render/screen/98/b4/98646d7955ca2ebe469af23aa34a81b4.jpeg",
+            "promo_pic_color": "FEFDFD",
+            "promo_pic_url": "https://static001.geekbang.org/render/screen/98/b4/98646d7955ca2ebe469af23aa34a81b4.jpeg",
+            "share_sale_price": 3600,
+            "share_sale_guest_price": 0
+          },
+          "promo": { "ent_time": 0 },
+          "channel": { "is": false, "back_amount": 0 },
+          "first_promo": { "price": 0, "could_join": false },
+          "coupon_promo": { "could_join": false, "price": 0 },
+          "helper": [],
+          "tab": { "comment": false },
+          "modules": [
+            {
+              "name": "gain",
+              "title": "",
+              "content": "\n主流语言编程范式详解\n分布式系统关键技术剖析\n程序员练级攻略\n高效学习的方法以及面试经验\n\n",
+              "type": "",
+              "is_top": false
+            }
+          ],
+          "cid": 0,
+          "first_aids": [],
+          "study_plan": {
+            "id": 0,
+            "day_nums": 0,
+            "article_nums": 0,
+            "learned_week_nums": 0,
+            "status": 0
+          },
+          "cate_id": 303,
+          "cate_name": "",
+          "group_tag": { "is_recommend": false, "is_recently_learn": false },
+          "first_award": {
+            "show": false,
+            "talks": 0,
+            "reads": 0,
+            "amount": 0,
+            "expire_time": 0,
+            "redirect_type": "",
+            "redirect_param": ""
+          }
+        },
+        "available_coupons": [2634],
+        "in_pvip": 0
+      },
+      {
+        "id": 100079901,
+        "spu": 799,
+        "ctime": 1621580737,
+        "utime": 1649646219,
+        "begin_time": 1621440000,
+        "end_time": 1937318400,
+        "price": {
+          "market": 12900,
+          "sale": 12900,
+          "sale_type": 1,
+          "start_time": 0,
+          "end_time": 0
+        },
+        "is_onborad": true,
+        "is_sale": false,
+        "is_groupbuy": false,
+        "is_promo": false,
+        "is_shareget": false,
+        "is_sharesale": true,
+        "type": "c1",
+        "is_column": true,
+        "is_core": true,
+        "is_video": false,
+        "is_audio": true,
+        "is_dailylesson": false,
+        "is_university": false,
+        "is_opencourse": false,
+        "is_qconp": false,
+        "nav_id": 1,
+        "time_not_sale": 0,
+        "title": "React Hooks 核心原理与实战",
+        "subtitle": "业务场景驱动，带你吃透 React Hooks",
+        "intro": "React作为应用最广泛的前端开发库之一，不仅有着极其丰富的用户界面，而且非常容易上手。同时，在其他前端应用发生翻天覆地的变化的时候，它的功能却异常稳定。正因如此，无论你是专职从事前端开发，还是以后端为主但也需要自己做一些 UI 界面，React 基本上就是你的首选。\n最重要的是，React 在2019年2月发布的 16.8 版本中引入了 Hooks。Hooks 带来的全新机制让人耳目一新，因为它进一步拓展 了React 的开发思路，为前端开发提供了一种更优的选择。\n要知道，Hooks 的两大好处就是业务逻辑重用和关注业务分离。所以在引入 Hooks 的概念之后，函数组件就具备了状态管理、生命周期管理等能力，它几乎可以实现原来 Class 组件具备的所有能力，而且还解决了 Class 组件存在的一些代码冗余、逻辑难以重用等问题。\n不过也肯定有很多人会有这样的疑问：\n\n转换 Hooks 的开发思路难不难？\n现在项目代码都是 Class 的，难道都得改一遍吗？\n\n我要先给你吃一颗定心丸。转换Hooks 的开发思路并不难，重要的是在实际中不断应用。而原来的项目代码也不需要修改，因为函数组件能够和已有的 Class 组件无缝衔接，一起工作。你只需根据具体情况采用 Hooks 的方式去写新的代码就行了，转换成本很低。\n为了帮助你高效地掌握Hooks，我们特意邀请了eBay 中国研发中心资深技术专家王沛老师，他会将自己及团队在使用 Hooks 过程中遇到的、看到的痛难点问题呈现出来。从函数组件和 Hooks 的角度出发，带你重新认识 React，帮助你在深入理解 Hooks 的基础上，使用 Hooks 的思想去开发前端应用，享受 Hooks 带来的诸多好处。\n\n老师会把核心原理和典型业务场景结合起来，让你在真实的场景中透彻理解Hooks 是如何解决问题的。通过实战锻炼，你会快速掌握这些通用原则和最佳实践，形成自己的知识库。之后在遇见类似的场景时，可以灵活调取。而我们的最高阶目标，就是让你在实战中掌握Hooks的思考方式，拥有举一反三的能力。\n模块设计\n课程主体划分为以下3大模块。\n基础篇：抓住问题本质，提高解决复杂问题的能力\n在“基础篇”，老师会抽丝剥茧，从“问题的本质是什么”这一角度出发来讲解每个机制，包括：React 为什么要发明 Hooks？useEffect 就是生命周期函数吗？等等。理解了最核心的那个问题，你也就拥有了举一反三的能力。\n实战篇：业务场景驱动，掌握解决实际问题的思考方式\n在“实战“层面，老师精心设计了9个不同的典型业务场景，并基于 React Hooks 去剖析一些常见设计模式。相信通过实战锻炼，你会快速掌握这些通用原则和最佳实践，形成自己的知识库。再遇见类似的场景时，就可以灵活调取。\n扩展篇：了解工具、生态和未来，开拓你的技术视野\n在这一部分，老师会给你介绍 React 应用该如何打包，整个生态有哪些可用的工具和资源，该如何测试，以及未来会有哪些发展的趋势。有了完整体系的积累，你才能真正独当一面，完成整个应用的开发、测试、打包和部署。\n",
+        "intro_html": "\u003cp\u003eReact作为应用最广泛的前端开发库之一，不仅有着极其丰富的用户界面，而且非常容易上手。同时，在其他前端应用发生翻天覆地的变化的时候，它的功能却异常稳定。正因如此，无论你是\u003cstrong\u003e专职从事前端开发，还是以后端为主但也需要自己做一些 UI 界面，React 基本上就是你的首选。\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e最重要的是，React 在2019年2月发布的 16.8 版本中引入了 Hooks。Hooks 带来的全新机制让人耳目一新，因为它进一步\u003cstrong\u003e拓展 了React 的开发思路，为前端开发提供了一种更优的选择\u003c/strong\u003e。\u003c/p\u003e\n\u003cp\u003e要知道，\u003cstrong\u003eHooks 的两大好处就是业务逻辑重用和关注业务分离\u003c/strong\u003e。所以在引入 Hooks 的概念之后，函数组件就具备了状态管理、生命周期管理等能力，它\u003cstrong\u003e几乎可以实现原来 Class 组件具备的所有能力，\u003c/strong\u003e而且还解决了 Class 组件存在的一些代码冗余、逻辑难以重用等问题。\u003c/p\u003e\n\u003cp\u003e不过也肯定有很多人会有这样的疑问：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e转换 Hooks 的开发思路难不难？\u003c/li\u003e\n\u003cli\u003e现在项目代码都是 Class 的，难道都得改一遍吗？\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e我要先给你吃一颗定心丸。转换Hooks 的开发思路并不难，重要的是在实际中不断应用。而原来的项目代码也不需要修改，因为函数组件能够和已有的 Class 组件无缝衔接，一起工作。你只需根据具体情况采用 Hooks 的方式去写新的代码就行了，转换成本很低。\u003c/p\u003e\n\u003cp\u003e为了帮助你高效地掌握Hooks，我们特意邀请了eBay 中国研发中心资深技术专家王沛老师，他会将自己及团队在使用 Hooks 过程中遇到的、看到的痛难点问题呈现出来。\u003cstrong\u003e从函数组件和 Hooks 的角度出发，带你重新认识 React\u003c/strong\u003e，帮助你在深入理解 Hooks 的基础上，使用 Hooks 的思想去开发前端应用，享受 Hooks 带来的诸多好处。\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"https://static001.geekbang.org/resource/image/a4/93/a4089b1acf12d52575ebfc89dd6b7593.png\" alt=\"\" /\u003e\u003c/p\u003e\n\u003cp\u003e老师会\u003cstrong\u003e把核心原理和典型业务场景结合起来\u003c/strong\u003e，让你在真实的场景中透彻理解Hooks 是如何解决问题的。通过实战锻炼，你会快速掌握这些通用原则和最佳实践，形成自己的知识库。之后在遇见类似的场景时，可以灵活调取。而我们的最高阶目标，就是让你\u003cstrong\u003e在实战中掌握Hooks的思考方式，拥有举一反三的能力\u003c/strong\u003e。\u003c/p\u003e\n\u003ch1\u003e模块设计\u003c/h1\u003e\n\u003cp\u003e课程主体划分为以下3大模块。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e基础篇：抓住问题本质，提高解决复杂问题的能力\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e在“基础篇”，老师会抽丝剥茧，从“问题的本质是什么”这一角度出发来讲解每个机制，包括：React 为什么要发明 Hooks？useEffect 就是生命周期函数吗？等等。理解了最核心的那个问题，你也就拥有了举一反三的能力。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e实战篇：业务场景驱动，掌握解决实际问题的思考方式\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e在“实战“层面，老师精心设计了9个不同的典型业务场景，并基于 React Hooks 去剖析一些常见设计模式。相信通过实战锻炼，你会快速掌握这些通用原则和最佳实践，形成自己的知识库。再遇见类似的场景时，就可以灵活调取。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e扩展篇：了解工具、生态和未来，开拓你的技术视野\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e在这一部分，老师会给你介绍 React 应用该如何打包，整个生态有哪些可用的工具和资源，该如何测试，以及未来会有哪些发展的趋势。有了完整体系的积累，你才能真正独当一面，完成整个应用的开发、测试、打包和部署。\u003c/p\u003e\n",
+        "ucode": "844B4C20BB3D6E",
+        "is_finish": true,
+        "author": {
+          "name": "王沛",
+          "intro": "eBay 中国研发中心资深技术专家",
+          "info": "",
+          "avatar": "https://static001.geekbang.org/resource/image/5d/98/5d8feec0294d0afa9db62021eaa75f98.jpg",
+          "brief_html": "\u003cp\u003e王沛，现担任 eBay 中国研发中心资深技术专家，负责 eBay 内部前端框架的研发。\u003c/p\u003e\n\u003cp\u003e作为国内第一批 React 的实践者和布道者，创建了 Rekit 开源项目：专属的 React 开发 IDE，目前在 GitHub 有超过 5000 Star。\u003c/p\u003e\n\u003cp\u003e曾任职于 IBM 和 SAP，主导了多个 UI 框架和大型云产品的前端架构和开发，在 IBM 期间参与 Dojo 开源项目，成为代码贡献者，参与创建和设计了基于 Dojo 的 GridX 项目。\u003c/p\u003e\n\u003cp\u003e此外，还在极客时间开设了《深入浅出 React》专栏，同时也是《征服Ajax：Web2.0开发技术详解》，《Web2.0界面设计模式》两本书的作者。\u003c/p\u003e\n",
+          "brief": "王沛，现担任 eBay 中国研发中心资深技术专家，负责 eBay 内部前端框架的研发。\n作为国内第一批 React 的实践者和布道者，创建了 Rekit 开源项目：专属的 React 开发 IDE，目前在 GitHub 有超过 5000 Star。\n曾任职于 IBM 和 SAP，主导了多个 UI 框架和大型云产品的前端架构和开发，在 IBM 期间参与 Dojo 开源项目，成为代码贡献者，参与创建和设计了基于 Dojo 的 GridX 项目。\n此外，还在极客时间开设了《深入浅出 React》专栏，同时也是《征服Ajax：Web2.0开发技术详解》，《Web2.0界面设计模式》两本书的作者。\n"
+        },
+        "cover": {
+          "square": "https://static001.geekbang.org/resource/image/5d/98/5d8feec0294d0afa9db62021eaa75f98.jpg",
+          "rectangle": "https://static001.geekbang.org/resource/image/d6/e7/d6554ee5b6ed226015af7728509e22e7.jpg",
+          "horizontal": "https://static001.geekbang.org/resource/image/8f/26/8f05b08d54144e211a51e7ab9dd49d26.jpg",
+          "lecture_horizontal": "https://static001.geekbang.org/resource/image/19/49/19f5871de1913e73614bcca78fc3b349.jpg",
+          "learn_horizontal": "https://static001.geekbang.org/resource/image/0a/6d/0a1af630c975e7485b709292e36eb26d.png",
+          "transparent": "https://static001.geekbang.org/resource/image/a2/ff/a2d0b0abb4bb4605647f3e18cf550aff.png",
+          "color": "#ceddf2"
+        },
+        "article": {
+          "id": 0,
+          "count": 25,
+          "count_req": 24,
+          "count_pub": 25,
+          "total_length": 20383,
+          "first_article_id": 0,
+          "first_article_title": ""
+        },
+        "seo": {
+          "keywords": [
+            "王沛",
+            "前端",
+            "React Hooks",
+            "函数组件",
+            "面试",
+            "实战",
+            "原理",
+            "开发"
+          ]
+        },
+        "share": {
+          "title": "王沛 · React Hooks 核心原理与实战",
+          "content": "业务场景驱动，带你吃透 React Hooks",
+          "cover": "https://static001.geekbang.org/resource/image/5d/98/5d8feec0294d0afa9db62021eaa75f98.jpg",
+          "poster": "https://static001.geekbang.org/resource/image/f0/cf/f0f715cc3c6c5185364e9798c5f864cf.jpg"
+        },
+        "labels": [5, 37, 32, 70],
+        "unit": "25讲",
+        "column_type": 1,
+        "column": {
+          "unit": "25讲",
+          "bgcolor": "F6F7FB",
+          "update_frequency": "全集",
+          "is_preorder": false,
+          "is_finish": true,
+          "is_include_preview": true,
+          "show_chapter": true,
+          "is_sale_product": true,
+          "study_service": [1, 2, 3, 5, 8, 11, 12, 14],
+          "path": {
+            "desc": "你将获得\n\n完整高效的 React Hooks 学习路径；\n用 Hooks 解决实际问题的思考方式；\n典型业务场景的最佳实践；\n一线前端技术专家的经验总结。\n\n",
+            "desc_html": "\u003cp\u003e\u003cstrong\u003e你将获得\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e完整高效的 React Hooks 学习路径；\u003c/li\u003e\n\u003cli\u003e用 Hooks 解决实际问题的思考方式；\u003c/li\u003e\n\u003cli\u003e典型业务场景的最佳实践；\u003c/li\u003e\n\u003cli\u003e一线前端技术专家的经验总结。\u003c/li\u003e\n\u003c/ul\u003e\n"
+          },
+          "is_camp": false,
+          "catalog_pic_url": "https://static001.geekbang.org/resource/image/5b/a4/5b7eaee452da708c2a382c4df54df7a4.jpg",
+          "recommend_articles": [
+            379299, 380210, 380891, 381423, 382459, 394526
+          ],
+          "recommend_comments": [],
+          "ranks": null,
+          "hot_comments": null,
+          "hot_lines": null,
+          "display_type": 3,
+          "intro_bg_style": 1,
+          "comment_top_ads": "",
+          "article_float_qrcode_url": "",
+          "article_float_app_qrcode_url": "",
+          "article_float_qrcode_jump": "",
+          "in_rank": false
+        },
+        "dl": {
+          "article": {
+            "id": 0,
+            "video_duration": "",
+            "video_hot": 0,
+            "could_preview": false
+          },
+          "topic_ids": []
+        },
+        "university": {
+          "total_hour": 0,
+          "term": 0,
+          "redirect_type": "",
+          "redirect_param": "",
+          "wx_qrcode": "",
+          "wx_rule": "",
+          "server_start_time": 0,
+          "lecturer_h_cover": ""
+        },
+        "opencourse": {
+          "video_bg": "",
+          "ad": {
+            "cover": "",
+            "cover_web": "",
+            "redirect_type": "",
+            "redirect_param": ""
+          },
+          "article_fav": { "aid": 0, "had_done": false, "count": 0 },
+          "author_h_cover": ""
+        },
+        "qconp": {
+          "topic_id": 0,
+          "cover_appoint": "",
+          "article": {
+            "id": 0,
+            "cover": "",
+            "video_duration": "",
+            "video_hot": 0
+          }
+        },
+        "fav_qrcode": "",
+        "extra": {
+          "sub": {
+            "count": 6576,
+            "had_done": false,
+            "could_order": true,
+            "access_mask": 0
+          },
+          "fav": { "count": 0, "had_done": false },
+          "rate": {
+            "article_count": 1,
+            "article_count_req": 1,
+            "is_finished": false,
+            "rate_percent": 4,
+            "video_seconds": 0,
+            "last_article_id": 0,
+            "last_chapter_id": 0,
+            "has_learn": false
+          },
+          "cert": { "id": "", "type": 0 },
+          "nps": {
+            "min": 12,
+            "status": 0,
+            "url": "https://jinshuju.net/f/DOKo9U"
+          },
+          "any_read": { "total": 2, "count": 0 },
+          "university": {
+            "status": 0,
+            "view_status": 0,
+            "charge_status": 0,
+            "share_renewal_status": 0,
+            "unlocked_status": 0,
+            "unlocked_chapter_ids": [],
+            "unlocked_chapter_id": 0,
+            "unlocked_chapter_title": "",
+            "unlocked_article_count": 0,
+            "unlocked_next_time": 0,
+            "expire_time": 0,
+            "is_expired": false,
+            "is_graduated": false,
+            "had_sub": false,
+            "timeline": [],
+            "has_wx_friend": false,
+            "sub_term_title": ""
+          },
+          "vip": { "is_year_card": false, "show": false, "end_time": -1 },
+          "appoint": { "could_do": false, "had_done": false, "count": 0 },
+          "group_buy": {
+            "success_ucount": 0,
+            "join_code": "",
+            "could_groupbuy": false,
+            "had_join": false,
+            "price": 0,
+            "list": []
+          },
+          "sharesale": {
+            "original_pic_color": "072B4E",
+            "original_pic_url": "https://static001.geekbang.org/render/screen/f7/78/f7953730ae5d7d89f5249f899cc6ee78.jpeg",
+            "promo_pic_color": "374E76",
+            "promo_pic_url": "https://static001.geekbang.org/render/screen/f7/78/f7953730ae5d7d89f5249f899cc6ee78.jpeg",
+            "share_sale_price": 2000,
+            "share_sale_guest_price": 0
+          },
+          "promo": { "ent_time": 0 },
+          "channel": { "is": false, "back_amount": 0 },
+          "first_promo": { "price": 0, "could_join": false },
+          "coupon_promo": { "could_join": false, "price": 0 },
+          "helper": [],
+          "tab": { "comment": false },
+          "modules": [
+            {
+              "name": "gain",
+              "title": "",
+              "content": "\n完整高效的 React Hooks 学习路径\n用 Hooks 解决实际问题的思考方式\n典型业务场景的最佳实践\n一线前端技术专家的经验总结\n\n",
+              "type": "",
+              "is_top": false
+            }
+          ],
+          "cid": 0,
+          "first_aids": [],
+          "study_plan": {
+            "id": 0,
+            "day_nums": 0,
+            "article_nums": 0,
+            "learned_week_nums": 0,
+            "status": 0
+          },
+          "cate_id": 303,
+          "cate_name": "",
+          "group_tag": { "is_recommend": false, "is_recently_learn": false },
+          "first_award": {
+            "show": false,
+            "talks": 0,
+            "reads": 0,
+            "amount": 0,
+            "expire_time": 0,
+            "redirect_type": "",
+            "redirect_param": ""
+          }
+        },
+        "available_coupons": [2631],
+        "in_pvip": 0
+      },
+      {
+        "id": 100023201,
+        "spu": 232,
+        "ctime": 1547107528,
+        "utime": 1649646229,
+        "begin_time": 1546963200,
+        "end_time": 1564502400,
+        "price": {
+          "market": 12900,
+          "sale": 12900,
+          "sale_type": 1,
+          "start_time": 0,
+          "end_time": 0
+        },
+        "is_onborad": true,
+        "is_sale": false,
+        "is_groupbuy": false,
+        "is_promo": false,
+        "is_shareget": false,
+        "is_sharesale": true,
+        "type": "c1",
+        "is_column": true,
+        "is_core": true,
+        "is_video": false,
+        "is_audio": true,
+        "is_dailylesson": false,
+        "is_university": false,
+        "is_opencourse": false,
+        "is_qconp": false,
+        "nav_id": 1,
+        "time_not_sale": 0,
+        "title": "重学前端",
+        "subtitle": "每天10分钟，重构你的前端知识体系",
+        "intro": "随着前端技术不断地发展，岗位需求与薪资一路攀升。整个前端业界正值“黄金时代”，而前端开发者们却似乎“学不动了”。\n这缘于前端的学习是一条先快后慢的曲线。在快速入门之后，大多数人都会感觉：自己仅仅停留在会用的阶段，后面的学习之路似乎越来越陡峭，每前进一步都十分艰难。\n其实是你没有意识到，你在自学的过程中走了太多弯路。\n大部分前端工程师的知识，其实都来自于工作中零散的学习和实践。在这种情况下，学习方向一旦偏离，就可能导致基础不牢固，知识认知不清晰，难以建立完整的知识体系。\n并且，如果所在公司业务简单，工程师更难以在实践中形成技术积累，这导致了自身技术长期处于非常初级的阶段。\nwinter在手机淘宝一直负责前端工程师的面试与培养工作，他深知其中的痛点与难点。在这个专栏中，winter将带你告别零散和盲目的自学，重新学习前端，一起搭建前端知识框架，共同明确学习重点，精进前端技术。\n专栏分为4大模块。\n模块一，JavaScript ：这部分会按照文法、语义和运行时去讨论JavaScript语言。这样的划分符合编程语言的一般规律，即“用一定的词法和语法，表达一定语义，去操作运行时”。而且，这样的划分也整合了零散的知识点，具有完备性。\n模块二，HTML和CSS：这部分会侧重从语言和功能的角度来讲解，带你领略两者的全貌。HTML的功能主要由标签来承担，所以我们首先会把标签分类，并分别进行讲解。语言部分，我们会简要介绍HTML的语法和几个重要的语言机制。在CSS的语言部分，我们会从大到小介绍@rule、选择器、单位等等。功能部分，我们大致可以分为布局、绘制和交互类。\n模块三，浏览器实现原理与API：这部分会着重讲解浏览器的工作原理。我们会一起来了解：一个浏览器到底是如何工作的。并且，我们还会学习一些重要的浏览器API，包括BOM、DOM、CSSOM等内容。只有了解了这些知识，你才能把JavaScript和HTML、CSS联系起来实现具体功能。\n模块四，前端综合应用：作者会结合自己的前端工作经验，选择自己在手淘和淘宝工作中的一些案例来辅助讲解前端的性能、工具链、持续集成、架构等实际应用内容。\n",
+        "intro_html": "\u003cp\u003e随着前端技术不断地发展，岗位需求与薪资一路攀升。整个前端业界正值“黄金时代”，而前端开发者们却似乎“学不动了”。\u003c/p\u003e\n\u003cp\u003e这缘于前端的学习是一条先快后慢的曲线。在快速入门之后，大多数人都会感觉：自己仅仅停留在会用的阶段，后面的学习之路似乎越来越陡峭，每前进一步都十分艰难。\u003c/p\u003e\n\u003cp\u003e\u003cspan class=\"orange\"\u003e其实是你没有意识到，你在自学的过程中走了太多弯路。\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e大部分前端工程师的知识，其实都来自于工作中零散的学习和实践。在这种情况下，学习方向一旦偏离，就可能导致基础不牢固，知识认知不清晰，难以建立完整的知识体系。\u003c/p\u003e\n\u003cp\u003e并且，如果所在公司业务简单，工程师更难以在实践中形成技术积累，这导致了自身技术长期处于非常初级的阶段。\u003c/p\u003e\n\u003cp\u003ewinter在手机淘宝一直负责前端工程师的面试与培养工作，他深知其中的痛点与难点。在这个专栏中，winter将带你告别零散和盲目的自学，重新学习前端，一起搭建前端知识框架，共同明确学习重点，精进前端技术。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e专栏分为4大模块。\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e模块一，JavaScript \u003c/strong\u003e：这部分会按照文法、语义和运行时去讨论JavaScript语言。这样的划分符合编程语言的一般规律，即“用一定的词法和语法，表达一定语义，去操作运行时”。而且，这样的划分也整合了零散的知识点，具有完备性。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e模块二，HTML和CSS\u003c/strong\u003e：这部分会侧重从语言和功能的角度来讲解，带你领略两者的全貌。HTML的功能主要由标签来承担，所以我们首先会把标签分类，并分别进行讲解。语言部分，我们会简要介绍HTML的语法和几个重要的语言机制。在CSS的语言部分，我们会从大到小介绍@rule、选择器、单位等等。功能部分，我们大致可以分为布局、绘制和交互类。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e模块三，浏览器实现原理与API\u003c/strong\u003e：这部分会着重讲解浏览器的工作原理。我们会一起来了解：一个浏览器到底是如何工作的。并且，我们还会学习一些重要的浏览器API，包括BOM、DOM、CSSOM等内容。只有了解了这些知识，你才能把JavaScript和HTML、CSS联系起来实现具体功能。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e模块四，前端综合应用\u003c/strong\u003e：作者会结合自己的前端工作经验，选择自己在手淘和淘宝工作中的一些案例来辅助讲解前端的性能、工具链、持续集成、架构等实际应用内容。\u003c/p\u003e\n",
+        "ucode": "2B068EDEAFEB56",
+        "is_finish": true,
+        "author": {
+          "name": "程劭非（winter）",
+          "intro": "前手机淘宝前端负责人",
+          "info": "",
+          "avatar": "https://static001.geekbang.org/resource/image/80/e2/80293b21a2cc9c02ccde5cec6838efe2.jpg",
+          "brief_html": "\u003cp\u003e程劭非，网名“winter”，前端社区知名专家，前手机淘宝前端负责人，先后就职于微软、盛大、阿里巴巴等公司。winter早年做过嵌入式系统浏览器、电子书和 WebOS的相关工作，近年致力于移动前端领域研究，提出过 Flexible 布局等先进概念，也产出过 Weex这样的移动前端开发框架。\u003c/p\u003e\n",
+          "brief": "程劭非，网名“winter”，前端社区知名专家，前手机淘宝前端负责人，先后就职于微软、盛大、阿里巴巴等公司。winter早年做过嵌入式系统浏览器、电子书和 WebOS的相关工作，近年致力于移动前端领域研究，提出过 Flexible 布局等先进概念，也产出过 Weex这样的移动前端开发框架。\n"
+        },
+        "cover": {
+          "square": "https://static001.geekbang.org/resource/image/80/e2/80293b21a2cc9c02ccde5cec6838efe2.jpg",
+          "rectangle": "https://static001.geekbang.org/resource/image/34/cd/3426ec843669ec32f98bd8234ca2eecd.jpg",
+          "horizontal": "https://static001.geekbang.org/resource/image/6b/56/c982765fbe2a49669aca98a36273.jpg",
+          "lecture_horizontal": "https://static001.geekbang.org/resource/image/c9/cd/c9a3c8da6502692a92583c0d2a78cfcd.jpg",
+          "learn_horizontal": "https://static001.geekbang.org/resource/image/da/19/da097c37cfe5baab14bb07987fc70719.png",
+          "transparent": "https://static001.geekbang.org/resource/image/fe/97/fe4c10236b3eee473df684dc50610c97.png",
+          "color": "#cfc4c2"
+        },
+        "article": {
+          "id": 0,
+          "count": 57,
+          "count_req": 49,
+          "count_pub": 57,
+          "total_length": 44413,
+          "first_article_id": 0,
+          "first_article_title": ""
+        },
+        "seo": { "keywords": ["前端", "前端面试"] },
+        "share": {
+          "title": "程劭非（winter） · 重学前端",
+          "content": "前阿里手淘前端负责人 winter 用45+课程，带你告别零散和盲目的学习，帮你在现有的知识框架和技能基础上，重建前端知识架构。",
+          "cover": "https://static001.geekbang.org/resource/image/80/e2/80293b21a2cc9c02ccde5cec6838efe2.jpg",
+          "poster": "https://static001.geekbang.org/resource/image/d4/a1/d419aa2295afded1f1808d71b3ccd8a1.jpg"
+        },
+        "labels": [5, 30],
+        "unit": "57讲",
+        "column_type": 1,
+        "column": {
+          "unit": "57讲",
+          "bgcolor": "e3dddc",
+          "update_frequency": "全集",
+          "is_preorder": false,
+          "is_finish": true,
+          "is_include_preview": true,
+          "show_chapter": true,
+          "is_sale_product": true,
+          "study_service": [1, 2, 3, 5, 9, 11],
+          "path": {
+            "desc": "你将获得：\n\n告别零散技术点，搭建前端知识体系；\n打通JS、HTML、CSS、浏览器4大脉络；\n40+前端难点完全解答；\n大厂前端工程实战演练。\n\n",
+            "desc_html": "\u003cp\u003e\u003cstrong\u003e你将获得\u003c/strong\u003e：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e告别零散技术点，搭建前端知识体系；\u003c/li\u003e\n\u003cli\u003e打通JS、HTML、CSS、浏览器4大脉络；\u003c/li\u003e\n\u003cli\u003e40+前端难点完全解答；\u003c/li\u003e\n\u003cli\u003e大厂前端工程实战演练。\u003c/li\u003e\n\u003c/ul\u003e\n"
+          },
+          "is_camp": false,
+          "catalog_pic_url": "https://static001.geekbang.org/resource/image/c6/3c/c64e92db621033ab7e26dae216c4ec3c.jpg",
+          "recommend_articles": [77345, 78884, 82397, 82764, 96809],
+          "recommend_comments": [],
+          "ranks": null,
+          "hot_comments": null,
+          "hot_lines": null,
+          "display_type": 3,
+          "intro_bg_style": 5,
+          "comment_top_ads": "",
+          "article_float_qrcode_url": "",
+          "article_float_app_qrcode_url": "",
+          "article_float_qrcode_jump": "",
+          "in_rank": false
+        },
+        "dl": {
+          "article": {
+            "id": 0,
+            "video_duration": "",
+            "video_hot": 0,
+            "could_preview": false
+          },
+          "topic_ids": []
+        },
+        "university": {
+          "total_hour": 0,
+          "term": 0,
+          "redirect_type": "",
+          "redirect_param": "",
+          "wx_qrcode": "",
+          "wx_rule": "",
+          "server_start_time": 0,
+          "lecturer_h_cover": ""
+        },
+        "opencourse": {
+          "video_bg": "",
+          "ad": {
+            "cover": "",
+            "cover_web": "",
+            "redirect_type": "",
+            "redirect_param": ""
+          },
+          "article_fav": { "aid": 0, "had_done": false, "count": 0 },
+          "author_h_cover": ""
+        },
+        "qconp": {
+          "topic_id": 0,
+          "cover_appoint": "",
+          "article": {
+            "id": 0,
+            "cover": "",
+            "video_duration": "",
+            "video_hot": 0
+          }
+        },
+        "fav_qrcode": "",
+        "extra": {
+          "sub": {
+            "count": 84994,
+            "had_done": true,
+            "could_order": true,
+            "access_mask": 64
+          },
+          "fav": { "count": 0, "had_done": false },
+          "rate": {
+            "article_count": 49,
+            "article_count_req": 44,
+            "is_finished": false,
+            "rate_percent": 89,
+            "video_seconds": 0,
+            "last_article_id": 0,
+            "last_chapter_id": 0,
+            "has_learn": false
+          },
+          "cert": { "id": "", "type": 0 },
+          "nps": {
+            "min": 25,
+            "status": 0,
+            "url": "https://jinshuju.net/f/KlNqmn"
+          },
+          "any_read": { "total": 4, "count": 0 },
+          "university": {
+            "status": 0,
+            "view_status": 0,
+            "charge_status": 0,
+            "share_renewal_status": 0,
+            "unlocked_status": 0,
+            "unlocked_chapter_ids": [],
+            "unlocked_chapter_id": 0,
+            "unlocked_chapter_title": "",
+            "unlocked_article_count": 0,
+            "unlocked_next_time": 0,
+            "expire_time": 0,
+            "is_expired": false,
+            "is_graduated": false,
+            "had_sub": false,
+            "timeline": [],
+            "has_wx_friend": false,
+            "sub_term_title": ""
+          },
+          "vip": {
+            "is_year_card": false,
+            "show": true,
+            "end_time": 1681315198
+          },
+          "appoint": { "could_do": false, "had_done": false, "count": 0 },
+          "group_buy": {
+            "success_ucount": 0,
+            "join_code": "",
+            "could_groupbuy": false,
+            "had_join": false,
+            "price": 0,
+            "list": []
+          },
+          "sharesale": {
+            "original_pic_color": "5F4741",
+            "original_pic_url": "https://static001.geekbang.org/render/screen/bd/39/bd84847518fda072411a3bfbb4029e39.jpeg",
+            "promo_pic_color": "654940",
+            "promo_pic_url": "https://static001.geekbang.org/render/screen/bd/39/bd84847518fda072411a3bfbb4029e39.jpeg",
+            "share_sale_price": 2000,
+            "share_sale_guest_price": 0
+          },
+          "promo": { "ent_time": 0 },
+          "channel": { "is": false, "back_amount": 0 },
+          "first_promo": { "price": 0, "could_join": false },
+          "coupon_promo": { "could_join": false, "price": 0 },
+          "helper": [],
+          "tab": { "comment": false },
+          "modules": [
+            {
+              "name": "gain",
+              "title": "",
+              "content": "\n告别零散技术点，搭建前端知识体系；\n打通JS、HTML、CSS、浏览器4大脉络；\n40+前端难点完全解答；\n大厂前端工程实战演练。\n\n",
+              "type": "",
+              "is_top": false
+            }
+          ],
+          "cid": 0,
+          "first_aids": [],
+          "study_plan": {
+            "id": 0,
+            "day_nums": 0,
+            "article_nums": 0,
+            "learned_week_nums": 0,
+            "status": 0
+          },
+          "cate_id": 303,
+          "cate_name": "",
+          "group_tag": { "is_recommend": false, "is_recently_learn": false },
+          "first_award": {
+            "show": false,
+            "talks": 0,
+            "reads": 0,
+            "amount": 0,
+            "expire_time": 0,
+            "redirect_type": "",
+            "redirect_param": ""
+          }
+        },
+        "available_coupons": [2631],
+        "in_pvip": 1
+      },
+      {
+        "id": 100078401,
+        "spu": 784,
+        "ctime": 1620531724,
+        "utime": 1649730068,
+        "begin_time": 1619625600,
+        "end_time": 1933603200,
+        "price": {
+          "market": 19900,
+          "sale": 19900,
+          "sale_type": 1,
+          "start_time": 0,
+          "end_time": 0
+        },
+        "is_onborad": true,
+        "is_sale": false,
+        "is_groupbuy": false,
+        "is_promo": false,
+        "is_shareget": false,
+        "is_sharesale": true,
+        "type": "c1",
+        "is_column": true,
+        "is_core": true,
+        "is_video": false,
+        "is_audio": true,
+        "is_dailylesson": false,
+        "is_university": false,
+        "is_opencourse": false,
+        "is_qconp": false,
+        "nav_id": 1,
+        "time_not_sale": 0,
+        "title": "操作系统实战45讲",
+        "subtitle": "从0到1，实现自己的操作系统",
+        "intro": "作为计算机王国中的实际“掌舵人”，操作系统是一切法则的制定者。它掌管着硬件软件等一切资源，并负责处理多种基本事务（内存管理、资源配置、I/O 设备、网络通信等），既能维护公平正义又能杀伐决断，而我们的课程就是讲解如何实现它。\n\n课程设计\n课程中，彭东老师将多年的操作系统开发经验倾囊相授，并带你从系统级的高度分析和解决相关问题，理论结合实践，带你从无到有实现一个自己的操作系统。\n\n实现路径\n\n从最小内核 Hello OS 练手，初步了解操作系统如何运行；\n对比经典操作系统，推陈出新，设计自己的操作系统——Cosmos 内核结构；\n解决操作系统的硬件、同步以及初始化问题，建立 Cosmos 操作系统的测试环境以及虚拟硬件；\n利用操作系统实现对计算机的管控，把 Cosmos 操作系统做大做强；\n拓展视野，储备知识，分享技术前沿内容。\n\n\n知识体系\n下图是彭东老师绘制的简版操作系统知识体系图，上面涉及的所有知识点，都会在后续的课程讲到。尽管看上去只是些简短的词汇，但随着课程的展开，你会发现每一小块，都犹如一片汪洋。\n\n终极目标\n\n搞懂操作系统长什么样，如何运作，深入理解和掌握相关知识（理论）；\n实现一个自己的，基于 x86 平台的支持多进程的操作系统内核（实操）。\n\n\n",
+        "intro_html": "\u003cp\u003e作为计算机王国中的实际“掌舵人”，操作系统是一切法则的制定者。它掌管着硬件软件等一切资源，并负责处理多种基本事务（内存管理、资源配置、I/O 设备、网络通信等），既能维护公平正义又能杀伐决断，\u003cstrong\u003e而我们的课程就是讲解如何实现它。\u003c/strong\u003e\u003c/p\u003e\n\u003cbr/\u003e\n\u003cp\u003e\u003cstrong\u003e课程设计\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e课程中，彭东老师将多年的操作系统开发经验倾囊相授，并带你从系统级的高度分析和解决相关问题，理论结合实践，带你从无到有实现一个自己的操作系统。\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"https://static001.geekbang.org/resource/image/33/93/33e8576aee66d5942c830dde0f812c93.jpg\" alt=\"\" /\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e实现路径\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e从最小内核 Hello OS 练手，初步了解操作系统如何运行；\u003c/li\u003e\n\u003cli\u003e对比经典操作系统，推陈出新，设计自己的操作系统——Cosmos 内核结构；\u003c/li\u003e\n\u003cli\u003e解决操作系统的硬件、同步以及初始化问题，建立 Cosmos 操作系统的测试环境以及虚拟硬件；\u003c/li\u003e\n\u003cli\u003e利用操作系统实现对计算机的管控，把 Cosmos 操作系统做大做强；\u003c/li\u003e\n\u003cli\u003e拓展视野，储备知识，分享技术前沿内容。\u003c/li\u003e\n\u003c/ul\u003e\n\u003cbr/\u003e\n\u003cp\u003e\u003cstrong\u003e知识体系\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e下图是彭东老师绘制的简版操作系统知识体系图，上面涉及的所有知识点，都会在后续的课程讲到。尽管看上去只是些简短的词汇，但随着课程的展开，你会发现每一小块，都犹如一片汪洋。\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"https://static001.geekbang.org/resource/image/2c/bd/2c6abcd035e5c83cdd7d356eca26b9bd.jpg\" alt=\"\" /\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e终极目标\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e搞懂操作系统长什么样，如何运作，深入理解和掌握相关知识（理论）；\u003c/li\u003e\n\u003cli\u003e实现一个自己的，基于 x86 平台的支持多进程的操作系统内核（实操）。\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cimg src=\"https://static001.geekbang.org/resource/image/ef/c1/efbf344e5ccdf388a576687990490ac1.gif\" alt=\"\" /\u003e\u003c/p\u003e\n",
+        "ucode": "B037712C8B8B3C",
+        "is_finish": true,
+        "author": {
+          "name": "彭东",
+          "intro": "网名 LMOS，Intel 傲腾项目关键开发者",
+          "info": "",
+          "avatar": "https://static001.geekbang.org/resource/image/96/d4/960e63aeb4aed854d6a0e0e40f192bd4.jpg",
+          "brief_html": "\u003cp\u003e彭东，网名 LMOS，Intel 傲腾项目关键开发者，《深度探索嵌入式操作系统：从零开始设计、架构和开发》作者。研究操作系统数十年，精通 Linux、BSD、SunOS 等开源操作系统内核，对 Windows 的 NT 内核也有一定研究。\u003c/p\u003e\n\u003cp\u003e曾独立开发过两套全新的操作系统内核：LMOS 和 LMOSEM。其中 LMOS 先后发布了 8 个测试版本，至今已是一个多进程、多 CPU、支持虚拟内存的全 64 位操作系统内核（x86_64 体系下），代码量达 10 万余行。LMOSEM（基于 ARM 体系）则是嵌入式操作系统的新尝试，实验了不同于 LMOS 的新架构、新代码。\u003c/p\u003e\n",
+          "brief": "彭东，网名 LMOS，Intel 傲腾项目关键开发者，《深度探索嵌入式操作系统：从零开始设计、架构和开发》作者。研究操作系统数十年，精通 Linux、BSD、SunOS 等开源操作系统内核，对 Windows 的 NT 内核也有一定研究。\n曾独立开发过两套全新的操作系统内核：LMOS 和 LMOSEM。其中 LMOS 先后发布了 8 个测试版本，至今已是一个多进程、多 CPU、支持虚拟内存的全 64 位操作系统内核（x86_64 体系下），代码量达 10 万余行。LMOSEM（基于 ARM 体系）则是嵌入式操作系统的新尝试，实验了不同于 LMOS 的新架构、新代码。\n"
+        },
+        "cover": {
+          "square": "https://static001.geekbang.org/resource/image/96/d4/960e63aeb4aed854d6a0e0e40f192bd4.jpg",
+          "rectangle": "https://static001.geekbang.org/resource/image/5a/47/5aa6ed2ef39c5002ed7e5cd1a8d17d47.png",
+          "horizontal": "https://static001.geekbang.org/resource/image/0a/58/0af98c2b376f83d4c4819d83f07f9e58.jpg",
+          "lecture_horizontal": "https://static001.geekbang.org/resource/image/a0/f4/a0c86b2149b005d1b059fd4fyya3b9f4.jpg",
+          "learn_horizontal": "https://static001.geekbang.org/resource/image/fd/0d/fdde66224ff7d116078b6273b885b90d.jpg",
+          "transparent": "https://static001.geekbang.org/resource/image/b1/49/b1d4577e7b7d91fd426738dd442f8249.png",
+          "color": "#bbccde"
+        },
+        "article": {
+          "id": 0,
+          "count": 57,
+          "count_req": 48,
+          "count_pub": 57,
+          "total_length": 49780,
+          "first_article_id": 0,
+          "first_article_title": ""
+        },
+        "seo": {
+          "keywords": [
+            "操作系统",
+            "Linux",
+            "计算机基础",
+            "底层",
+            "内核",
+            "后端开发",
+            "iOS",
+            "彭东",
+            "C语言",
+            "OS",
+            "实战"
+          ]
+        },
+        "share": {
+          "title": "彭东 · 操作系统实战45讲",
+          "content": "从0到1，实现自己的操作系统",
+          "cover": "https://static001.geekbang.org/resource/image/96/d4/960e63aeb4aed854d6a0e0e40f192bd4.jpg",
+          "poster": "https://static001.geekbang.org/resource/image/c1/c5/c1f96e50d6485dd9111523fa85bf7ac5.jpeg"
+        },
+        "labels": [9, 3, 79, 83, 80, 64],
+        "unit": "57讲",
+        "column_type": 1,
+        "column": {
+          "unit": "57讲",
+          "bgcolor": "F6F7FB",
+          "update_frequency": "全集",
+          "is_preorder": false,
+          "is_finish": true,
+          "is_include_preview": true,
+          "show_chapter": true,
+          "is_sale_product": true,
+          "study_service": [1, 2, 3, 8, 11, 12, 14],
+          "path": {
+            "desc": "你将获得：\n\n洞悉 OS 运行机制与架构实现；\n强化理解 Linux 核心技术；\n系统级别的编程技巧；\n“保姆级”代码注释及详解图。\n\n",
+            "desc_html": "\u003cp\u003e\u003cstrong\u003e你将获得：\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e洞悉 OS 运行机制与架构实现；\u003c/li\u003e\n\u003cli\u003e强化理解 Linux 核心技术；\u003c/li\u003e\n\u003cli\u003e系统级别的编程技巧；\u003c/li\u003e\n\u003cli\u003e“保姆级”代码注释及详解图。\u003c/li\u003e\n\u003c/ul\u003e\n"
+          },
+          "is_camp": false,
+          "catalog_pic_url": "https://static001.geekbang.org/resource/image/29/59/2980226dbc024fe9b2fc6de2ded10559.jpg",
+          "recommend_articles": [
+            375278, 376064, 394084, 394875, 404013, 483437
+          ],
+          "recommend_comments": [313655, 291998],
+          "ranks": null,
+          "hot_comments": null,
+          "hot_lines": null,
+          "display_type": 3,
+          "intro_bg_style": 2,
+          "comment_top_ads": "",
+          "article_float_qrcode_url": "https://static001.geekbang.org/resource/image/97/f6/971ea60711491c8930e1ffb6f1b911f6.png",
+          "article_float_app_qrcode_url": "",
+          "article_float_qrcode_jump": "https://time.geekbang.org/serv/v4/misc/jump?uri=https%3A%2F%2Ftime.geekbang.org%2Fhybrid%2Fmp%2Fjump%3Furl%3Dhttps%253A%252F%252Fstatic001.geekbang.org%252Fresource%252Fimage%252Fe1%252Ff7%252Fe1fe37897e6b0690357897e98e43b7f7.png",
+          "in_rank": true
+        },
+        "dl": {
+          "article": {
+            "id": 0,
+            "video_duration": "",
+            "video_hot": 0,
+            "could_preview": false
+          },
+          "topic_ids": []
+        },
+        "university": {
+          "total_hour": 0,
+          "term": 0,
+          "redirect_type": "",
+          "redirect_param": "",
+          "wx_qrcode": "",
+          "wx_rule": "",
+          "server_start_time": 0,
+          "lecturer_h_cover": ""
+        },
+        "opencourse": {
+          "video_bg": "",
+          "ad": {
+            "cover": "",
+            "cover_web": "",
+            "redirect_type": "",
+            "redirect_param": ""
+          },
+          "article_fav": { "aid": 0, "had_done": false, "count": 0 },
+          "author_h_cover": ""
+        },
+        "qconp": {
+          "topic_id": 0,
+          "cover_appoint": "",
+          "article": {
+            "id": 0,
+            "cover": "",
+            "video_duration": "",
+            "video_hot": 0
+          }
+        },
+        "fav_qrcode": "",
+        "extra": {
+          "sub": {
+            "count": 38123,
+            "had_done": true,
+            "could_order": true,
+            "access_mask": 64
+          },
+          "fav": { "count": 0, "had_done": false },
+          "rate": {
+            "article_count": 0,
+            "article_count_req": 0,
+            "is_finished": false,
+            "rate_percent": 0,
+            "video_seconds": 0,
+            "last_article_id": 0,
+            "last_chapter_id": 0,
+            "has_learn": false
+          },
+          "cert": { "id": "", "type": 0 },
+          "nps": {
+            "min": 24,
+            "status": 0,
+            "url": "https://jinshuju.net/f/sR6ivf"
+          },
+          "any_read": { "total": 4, "count": 0 },
+          "university": {
+            "status": 0,
+            "view_status": 0,
+            "charge_status": 0,
+            "share_renewal_status": 0,
+            "unlocked_status": 0,
+            "unlocked_chapter_ids": [],
+            "unlocked_chapter_id": 0,
+            "unlocked_chapter_title": "",
+            "unlocked_article_count": 0,
+            "unlocked_next_time": 0,
+            "expire_time": 0,
+            "is_expired": false,
+            "is_graduated": false,
+            "had_sub": false,
+            "timeline": [],
+            "has_wx_friend": false,
+            "sub_term_title": ""
+          },
+          "vip": {
+            "is_year_card": false,
+            "show": true,
+            "end_time": 1681315198
+          },
+          "appoint": { "could_do": false, "had_done": false, "count": 0 },
+          "group_buy": {
+            "success_ucount": 0,
+            "join_code": "",
+            "could_groupbuy": false,
+            "had_join": false,
+            "price": 0,
+            "list": []
+          },
+          "sharesale": {
+            "original_pic_color": "364B7F",
+            "original_pic_url": "https://static001.geekbang.org/render/screen/c4/6c/c447ee1c5621a272363c7b146439736c.png",
+            "promo_pic_color": "324974",
+            "promo_pic_url": "https://static001.geekbang.org/render/screen/c4/6c/c447ee1c5621a272363c7b146439736c.png",
+            "share_sale_price": 2400,
+            "share_sale_guest_price": 0
+          },
+          "promo": { "ent_time": 0 },
+          "channel": { "is": false, "back_amount": 0 },
+          "first_promo": { "price": 0, "could_join": false },
+          "coupon_promo": { "could_join": false, "price": 0 },
+          "helper": [],
+          "tab": { "comment": false },
+          "modules": [
+            {
+              "name": "gain",
+              "title": "",
+              "content": "\n洞悉 OS 运行机制与架构实现\n强化理解 Linux 核心技术\n系统级别的编程技巧\n“保姆级”代码注释及详解图\n\n",
+              "type": "",
+              "is_top": false
+            }
+          ],
+          "cid": 0,
+          "first_aids": [],
+          "study_plan": {
+            "id": 0,
+            "day_nums": 0,
+            "article_nums": 0,
+            "learned_week_nums": 0,
+            "status": 0
+          },
+          "cate_id": 303,
+          "cate_name": "",
+          "group_tag": { "is_recommend": false, "is_recently_learn": false },
+          "first_award": {
+            "show": false,
+            "talks": 0,
+            "reads": 0,
+            "amount": 0,
+            "expire_time": 0,
+            "redirect_type": "",
+            "redirect_param": ""
+          }
+        },
+        "available_coupons": [2632],
+        "in_pvip": 1
+      },
+      {
+        "id": 100053801,
+        "spu": 538,
+        "ctime": 1592454078,
+        "utime": 1649646223,
+        "begin_time": 1592064000,
+        "end_time": 2256134400,
+        "price": {
+          "market": 19900,
+          "sale": 19900,
+          "sale_type": 1,
+          "start_time": 0,
+          "end_time": 0
+        },
+        "is_onborad": true,
+        "is_sale": false,
+        "is_groupbuy": false,
+        "is_promo": false,
+        "is_shareget": false,
+        "is_sharesale": true,
+        "type": "c1",
+        "is_column": true,
+        "is_core": true,
+        "is_video": false,
+        "is_audio": true,
+        "is_dailylesson": false,
+        "is_university": false,
+        "is_opencourse": false,
+        "is_qconp": false,
+        "nav_id": 1,
+        "time_not_sale": 0,
+        "title": "跟月影学可视化",
+        "subtitle": "系统掌握图形学与可视化核心原理",
+        "intro": "目前，可视化被越来越多地应用在C端和B端的互联网产品中。比如，我们熟悉的淘宝“双十一”购物节的可视化大屏；再比如，很多企业级应用中的态势感知和指挥调度的可视化大屏，以及国家大力推动的智慧城市、智慧生活等等，这些都是通过可视化技术呈现出来的。那可视化到底是什么呢？用一句话来说，可视化就是把数据组织成容易被人理解和认知的结构，然后用图形这种更形象的方式呈现出来的理论、方法和技术。因此，可视化工程师的日常工作，就是根据产品经理和设计师的想法，运用数学和图形学的知识，绘制出各种各样的几何图形。不过这还不够，一名优秀的可视化工程师，要能在这个基础上实现真正贴合用户需求的、灵活多变的、具有视觉震撼力并且充满创意的优秀可视化作品。要实现这一点，离不开视觉呈现和数据处理相关的知识。但是这些知识不仅密度大，综合性也非常强。我们应该如何掌握它呢？为此，我们特意邀请了月影，来给你系统讲解可视化开发的原理和方法、数据处理的技巧以及视觉呈现的各种方式，帮助你创建出自己的可视化工具集，更高效地解决可视化开发中的问题。由此，你不仅可以实现更具冲击力的视觉效果，还能从中收获高级的前端知识，让你成为“更懂前端”的可视化人才。课程模块设计根据可视化的实现方式，课程分为以下五个部分。图形基础：带你熟悉HTML/CSS、SVG、Canvas2D和WebGL这四种图形系统，学会它们的基本用法、优点和局限性，从而能在实际应用中选择合适的图形系统，以达到最好的视觉效果。数学基础：深入讲解向量、矩阵运算、参数方程、三角剖分以及仿射变换等内容，并配合综合运用，帮你建立一套通用的数学知识体系，适用于所有图形系统，以此来解决可视化图形呈现中的大部分问题。视觉呈现：和你讨论像素化、动画、3D和交互等话题，结合美颜、图片处理和视觉特效等实际例子，来应用各种数学和图形学知识，帮你全面提升视觉呈现的能力，实现更高级的视觉效果。性能优化：通过学习WebGL渲染复杂的2D、3D模型的方法，了解可视化高性能渲染的技术思路。在这一模块月影将和你分享他总结的一些成熟的方法论，帮助你在实现可视化项目的时候，解决大规模数据批量渲染的性能瓶颈问题。数据驱动：结合3D柱状图、3D层级结构图、3D音乐可视化等案例，讲解数据处理的技巧，真正正将数据和视觉呈现结合起来，实现具有科技感的3D可视化大屏效果，最终形成完整的可视化解决方案。",
+        "intro_html": "\u003cp\u003e目前，可视化被越来越多地应用在C端和B端的互联网产品中。\u003c/p\u003e\n\u003cp\u003e比如，我们熟悉的淘宝“双十一”购物节的可视化大屏；再比如，很多企业级应用中的态势感知和指挥调度的可视化大屏，以及国家大力推动的智慧城市、智慧生活等等，这些都是通过可视化技术呈现出来的。\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"https://static001.geekbang.org/resource/image/e8/30/e89f4ac982dedb2dd2151a404236dc30.gif\" alt=\"\" /\u003e\u003c/p\u003e\n\u003cp\u003e那可视化到底是什么呢？\u003c/p\u003e\n\u003cp\u003e用一句话来说，可视化就是把数据组织成容易被人理解和认知的结构，然后用图形这种更形象的方式呈现出来的理论、方法和技术。\u003c/p\u003e\n\u003cp\u003e因此，可视化工程师的日常工作，就是根据产品经理和设计师的想法，运用数学和图形学的知识，绘制出各种各样的几何图形。不过这还不够，一名优秀的可视化工程师，要能在这个基础上实现真正贴合用户需求的、灵活多变的、具有视觉震撼力并且充满创意的优秀可视化作品。\u003c/p\u003e\n\u003cp\u003e要实现这一点，离不开视觉呈现和数据处理相关的知识。但是这些知识不仅密度大，综合性也非常强。我们应该如何掌握它呢？\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"https://static001.geekbang.org/resource/image/0b/d4/0b71fbc404c3125585e609a43c64d9d4.jpg\" alt=\"\" /\u003e\u003c/p\u003e\n\u003cp\u003e为此，我们特意邀请了月影，来给你系统讲解可视化开发的原理和方法、数据处理的技巧以及视觉呈现的各种方式，帮助你创建出自己的可视化工具集，更高效地解决可视化开发中的问题。由此，你不仅可以实现更具冲击力的视觉效果，还能从中收获高级的前端知识，让你成为“更懂前端”的可视化人才。\u003c/p\u003e\n\u003ch2\u003e课程模块设计\u003c/h2\u003e\n\u003cp\u003e根据可视化的实现方式，课程分为以下五个部分。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e图形基础\u003c/strong\u003e：带你熟悉HTML/CSS、SVG、Canvas2D和WebGL这四种图形系统，学会它们的基本用法、优点和局限性，从而能在实际应用中选择合适的图形系统，以达到最好的视觉效果。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e数学基础\u003c/strong\u003e：深入讲解向量、矩阵运算、参数方程、三角剖分以及仿射变换等内容，并配合综合运用，帮你建立一套通用的数学知识体系，适用于所有图形系统，以此来解决可视化图形呈现中的大部分问题。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e视觉呈现\u003c/strong\u003e：和你讨论像素化、动画、3D和交互等话题，结合美颜、图片处理和视觉特效等实际例子，来应用各种数学和图形学知识，帮你全面提升视觉呈现的能力，实现更高级的视觉效果。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e性能优化\u003c/strong\u003e：通过学习WebGL渲染复杂的2D、3D模型的方法，了解可视化高性能渲染的技术思路。在这一模块月影将和你分享他总结的一些成熟的方法论，帮助你在实现可视化项目的时候，解决大规模数据批量渲染的性能瓶颈问题。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e数据驱动\u003c/strong\u003e：结合3D柱状图、3D层级结构图、3D音乐可视化等案例，讲解数据处理的技巧，真正正将数据和视觉呈现结合起来，实现具有科技感的3D可视化大屏效果，最终形成完整的可视化解决方案。\u003c/p\u003e\n",
+        "ucode": "298582FA7DBF27",
+        "is_finish": true,
+        "author": {
+          "name": "月影",
+          "intro": "前奇虎360奇舞团团长，可视化UI框架SpriteJS核心开发者，《JavaScript王者归来》作者",
+          "info": "",
+          "avatar": "https://static001.geekbang.org/resource/image/26/37/2624ca8f00f7a870fcbb963edd51cd37.jpg",
+          "brief_html": "\u003cp\u003e月影（吴亮），前奇虎360奇舞团团长，拥有15年开发经验的资深前端专家，熟悉JavaScript相关的开发工作，著有《JavaScript王者归来》。\u003c/p\u003e\n\u003cp\u003e月影非常热爱写代码，一直在做一线项目开发，并坚持技术输出。最近几年，月影深耕于可视化领域，深入研究图形学和渲染引擎底层技术，并且作为核心开发者，开发出了开源跨平台图形系统SpriteJS。SpriteJS默认采用WebGL渲染，针对可视化场景做了大量优化，能够高性能地渲染酷炫的可视化大屏。同时，它还有很好的跨平台能力，可以移植到任何拥有Canvas环境的平台上。\u003c/p\u003e\n",
+          "brief": "月影（吴亮），前奇虎360奇舞团团长，拥有15年开发经验的资深前端专家，熟悉JavaScript相关的开发工作，著有《JavaScript王者归来》。月影非常热爱写代码，一直在做一线项目开发，并坚持技术输出。最近几年，月影深耕于可视化领域，深入研究图形学和渲染引擎底层技术，并且作为核心开发者，开发出了开源跨平台图形系统SpriteJS。SpriteJS默认采用WebGL渲染，针对可视化场景做了大量优化，能够高性能地渲染酷炫的可视化大屏。同时，它还有很好的跨平台能力，可以移植到任何拥有Canvas环境的平台上。"
+        },
+        "cover": {
+          "square": "https://static001.geekbang.org/resource/image/26/37/2624ca8f00f7a870fcbb963edd51cd37.jpg",
+          "rectangle": "https://static001.geekbang.org/resource/image/f1/8f/f1100f28c4fd1f8e807c13f9a2ace48f.jpg",
+          "horizontal": "https://static001.geekbang.org/resource/image/d9/2b/d9153905acbd929420e46e534a920b2b.jpg",
+          "lecture_horizontal": "https://static001.geekbang.org/resource/image/3c/cf/3c75ac62e7b3e50e43c9a2b312b093cf.jpg",
+          "learn_horizontal": "https://static001.geekbang.org/resource/image/f1/f3/f1c9f20ec9f84f71fea3d95fd309cdf3.png",
+          "transparent": "https://static001.geekbang.org/resource/image/8b/69/8b7e52beff465cf06c424c8d39bd2c69.png",
+          "color": "#bbccde"
+        },
+        "article": {
+          "id": 0,
+          "count": 54,
+          "count_req": 45,
+          "count_pub": 54,
+          "total_length": 41595,
+          "first_article_id": 0,
+          "first_article_title": ""
+        },
+        "seo": {
+          "keywords": [
+            "月影",
+            "可视化",
+            "图形学",
+            "数据处理",
+            "3D",
+            "2D",
+            "可视化大屏",
+            "可视化工具集",
+            ""
+          ]
+        },
+        "share": {
+          "title": "月影 · 跟月影学可视化",
+          "content": "系统掌握图形学与可视化核心原理",
+          "cover": "https://static001.geekbang.org/resource/image/26/37/2624ca8f00f7a870fcbb963edd51cd37.jpg",
+          "poster": "https://static001.geekbang.org/resource/image/f8/26/f8a6f749c94253fd77154c23e5477426.jpg"
+        },
+        "labels": [37, 5, 70],
+        "unit": "54讲",
+        "column_type": 1,
+        "column": {
+          "unit": "54讲",
+          "bgcolor": "F6F7FB",
+          "update_frequency": "全集",
+          "is_preorder": false,
+          "is_finish": true,
+          "is_include_preview": true,
+          "show_chapter": true,
+          "is_sale_product": true,
+          "study_service": [1, 2, 3, 5, 8, 9, 11, 14],
+          "path": {
+            "desc": "你将获得：从0到1构建可视化技术体系；掌握4大绘图系统底层实现原理；开发适合自己的可视化工具集；案例+代码，实现3D可视化大屏。",
+            "desc_html": "\u003cp\u003e\u003cstrong\u003e你将获得\u003c/strong\u003e：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e从 0 到 1 构建可视化技术体系；\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e掌握 4 大绘图系统底层实现原理；\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e开发适合自己的可视化工具集；\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e案例 + 代码，实现 3D 可视化大屏。\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n"
+          },
+          "is_camp": false,
+          "catalog_pic_url": "https://static001.geekbang.org/resource/image/6c/74/6cb26f649c4f0364df5a27e7a435b574.jpg",
+          "recommend_articles": [
+            254631, 258101, 279075, 290387, 293016, 296035
+          ],
+          "recommend_comments": [],
+          "ranks": null,
+          "hot_comments": null,
+          "hot_lines": null,
+          "display_type": 3,
+          "intro_bg_style": 3,
+          "comment_top_ads": "",
+          "article_float_qrcode_url": "",
+          "article_float_app_qrcode_url": "",
+          "article_float_qrcode_jump": "",
+          "in_rank": false
+        },
+        "dl": {
+          "article": {
+            "id": 0,
+            "video_duration": "",
+            "video_hot": 0,
+            "could_preview": false
+          },
+          "topic_ids": []
+        },
+        "university": {
+          "total_hour": 0,
+          "term": 0,
+          "redirect_type": "",
+          "redirect_param": "",
+          "wx_qrcode": "",
+          "wx_rule": "",
+          "server_start_time": 0,
+          "lecturer_h_cover": ""
+        },
+        "opencourse": {
+          "video_bg": "",
+          "ad": {
+            "cover": "",
+            "cover_web": "",
+            "redirect_type": "",
+            "redirect_param": ""
+          },
+          "article_fav": { "aid": 0, "had_done": false, "count": 0 },
+          "author_h_cover": ""
+        },
+        "qconp": {
+          "topic_id": 0,
+          "cover_appoint": "",
+          "article": {
+            "id": 0,
+            "cover": "",
+            "video_duration": "",
+            "video_hot": 0
+          }
+        },
+        "fav_qrcode": "",
+        "extra": {
+          "sub": {
+            "count": 16521,
+            "had_done": true,
+            "could_order": true,
+            "access_mask": 64
+          },
+          "fav": { "count": 0, "had_done": false },
+          "rate": {
+            "article_count": 0,
+            "article_count_req": 0,
+            "is_finished": false,
+            "rate_percent": 0,
+            "video_seconds": 0,
+            "last_article_id": 0,
+            "last_chapter_id": 0,
+            "has_learn": false
+          },
+          "cert": { "id": "", "type": 0 },
+          "nps": {
+            "min": 23,
+            "status": 0,
+            "url": "https://jinshuju.net/f/d976Ed"
+          },
+          "any_read": { "total": 4, "count": 0 },
+          "university": {
+            "status": 0,
+            "view_status": 0,
+            "charge_status": 0,
+            "share_renewal_status": 0,
+            "unlocked_status": 0,
+            "unlocked_chapter_ids": [],
+            "unlocked_chapter_id": 0,
+            "unlocked_chapter_title": "",
+            "unlocked_article_count": 0,
+            "unlocked_next_time": 0,
+            "expire_time": 0,
+            "is_expired": false,
+            "is_graduated": false,
+            "had_sub": false,
+            "timeline": [],
+            "has_wx_friend": false,
+            "sub_term_title": ""
+          },
+          "vip": {
+            "is_year_card": false,
+            "show": true,
+            "end_time": 1681315198
+          },
+          "appoint": { "could_do": false, "had_done": false, "count": 0 },
+          "group_buy": {
+            "success_ucount": 0,
+            "join_code": "",
+            "could_groupbuy": false,
+            "had_join": false,
+            "price": 0,
+            "list": []
+          },
+          "sharesale": {
+            "original_pic_color": "384C6C",
+            "original_pic_url": "https://static001.geekbang.org/render/screen/9d/4f/9d5fd761b98159ba1f15ba5710f7be4f.jpeg",
+            "promo_pic_color": "384C6C",
+            "promo_pic_url": "https://static001.geekbang.org/render/screen/9d/4f/9d5fd761b98159ba1f15ba5710f7be4f.jpeg",
+            "share_sale_price": 2400,
+            "share_sale_guest_price": 0
+          },
+          "promo": { "ent_time": 0 },
+          "channel": { "is": false, "back_amount": 0 },
+          "first_promo": { "price": 0, "could_join": false },
+          "coupon_promo": { "could_join": false, "price": 0 },
+          "helper": [],
+          "tab": { "comment": false },
+          "modules": [
+            {
+              "name": "gain",
+              "title": "",
+              "content": "从0到1构建可视化技术体系掌握4大绘图系统底层实现原理开发适合自己的可视化工具集案例+代码，实现3D可视化大屏",
+              "type": "",
+              "is_top": false
+            }
+          ],
+          "cid": 0,
+          "first_aids": [],
+          "study_plan": {
+            "id": 0,
+            "day_nums": 0,
+            "article_nums": 0,
+            "learned_week_nums": 0,
+            "status": 0
+          },
+          "cate_id": 303,
+          "cate_name": "",
+          "group_tag": { "is_recommend": false, "is_recently_learn": false },
+          "first_award": {
+            "show": false,
+            "talks": 0,
+            "reads": 0,
+            "amount": 0,
+            "expire_time": 0,
+            "redirect_type": "",
+            "redirect_param": ""
+          }
+        },
+        "available_coupons": [2632],
+        "in_pvip": 1
+      },
+      {
+        "id": 100094401,
+        "spu": 944,
+        "ctime": 1634052645,
+        "utime": 1649646400,
+        "begin_time": 1634486400,
+        "end_time": 1665504000,
+        "price": {
+          "market": 12900,
+          "sale": 12900,
+          "sale_type": 1,
+          "start_time": 0,
+          "end_time": 0
+        },
+        "is_onborad": true,
+        "is_sale": false,
+        "is_groupbuy": false,
+        "is_promo": false,
+        "is_shareget": false,
+        "is_sharesale": true,
+        "type": "c1",
+        "is_column": true,
+        "is_core": true,
+        "is_video": false,
+        "is_audio": true,
+        "is_dailylesson": false,
+        "is_university": false,
+        "is_opencourse": false,
+        "is_qconp": false,
+        "nav_id": 1,
+        "time_not_sale": 0,
+        "title": "玩转Vue 3全家桶",
+        "subtitle": "基础+实战+源码，全方位学透Vue 3",
+        "intro": "Vue 目前已经是国内最流⾏的前端框架之⼀，Vue 3 带来的诸多优化更是让前端圈迎来了新的潮流，比如：\n\n基于 Proxy 的全新响应式实现；\nComposition API + \u0026lt;script setup\u0026gt; 组织代码的更优方式；\n更有料的 TypeScript 支持；\n新的 VDOM diff 逻辑；\n更小的体积 + 更高的性能；\n生态中还多了 Vite 这个新⼀代工程化工具。\n\n可以说，Vue 3 很好地拥抱了未来，并且在新手友好度上做到了极致。\n但即便如此，前端开发者们在学习 Vue 3 时还是会遇到一些困惑。因为大部分的前端工程师都是转行而来，而复杂场景优化和职业生涯进阶都需要系统的计算机训练，这也是前端从业人员割裂的主要原因。很多前端同学想要进阶却不得要领，每每尝试计算机的专业课都被难度劝退。\n所以这个专栏除了帮助你进阶 Vue 的开发能⼒，也希望能够通过 Vue 生态源码搭建起前端和计算机知识体系的桥梁，让你窥探到编译原理、数据结构、设计模式等计算机理论在前端的实际应用。最终带你潜入前端技能深水区，全面提升前端开发的核心竞争力。\n\n课程设计模块\n整个专栏共分为以下五个部分：\n课前导读篇：课程的前置知识，对齐学习目标，上手一个关于 Vue 3 的小应用，初识 Vue 3 新特性，了解 Vue 2 项目升级到 Vue 3 项目的注意事项。\n基础入门篇：通过⼀个实例开发，对 Vue 3 的核心知识点做一个梳理，让你能够使用 Vue 3 进行简单的项目开发。\n全家桶实战篇：介绍 Vue 相关的生态库，以及实战开发中需要用到的库，这一部分主要帮助你应对复杂项目。\nVue 3 进阶开发篇：在前两个部分的基础之上，进一步深入理解 Vue 本身，帮助初级开发者往中高级方向进阶。\nVue 3 生态源码篇：抛开常规的“考究”式源码分析，先宏观了解 Vue 的设计思路，也就是 Vue 为什么会是现在这个样子，之后带你手写实现 mini-vue。此为专栏的升华之处，你前面所积淀下来的编译原理、算法、设计模式等知识相当于你系统化学习前端的第一步，而这一步将会为你持续学习提供动力。\n",
+        "intro_html": "\u003cp\u003eVue 目前已经是国内最流⾏的前端框架之⼀，Vue 3 带来的诸多优化更是让前端圈迎来了新的潮流，比如：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e基于 Proxy 的全新响应式实现；\u003c/li\u003e\n\u003cli\u003eComposition API + \u0026lt;script setup\u0026gt; 组织代码的更优方式；\u003c/li\u003e\n\u003cli\u003e更有料的 TypeScript 支持；\u003c/li\u003e\n\u003cli\u003e新的 VDOM diff 逻辑；\u003c/li\u003e\n\u003cli\u003e更小的体积 + 更高的性能；\u003c/li\u003e\n\u003cli\u003e生态中还多了 Vite 这个新⼀代工程化工具。\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e可以说，Vue 3 很好地拥抱了未来，并且在新手友好度上做到了极致。\u003c/p\u003e\n\u003cp\u003e但即便如此，前端开发者们在学习 Vue 3 时还是会遇到一些困惑。因为大部分的前端工程师都是转行而来，而复杂场景优化和职业生涯进阶都需要系统的计算机训练，这也是前端从业人员割裂的主要原因。很多前端同学想要进阶却不得要领，每每尝试计算机的专业课都被难度劝退。\u003c/p\u003e\n\u003cp\u003e所以这个专栏除了帮助你进阶 Vue 的开发能⼒，也希望能够通过 Vue 生态源码搭建起前端和计算机知识体系的桥梁，让你窥探到编译原理、数据结构、设计模式等计算机理论在前端的实际应用。最终带你潜入前端技能深水区，全面提升前端开发的核心竞争力。\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"https://static001.geekbang.org/resource/image/b8/95/b8fa99b00f432b7df6d3a292ec0a8095.jpg\" alt=\"\" /\u003e\u003c/p\u003e\n\u003ch3\u003e课程设计模块\u003c/h3\u003e\n\u003cp\u003e整个专栏共分为以下五个部分：\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e课前导读篇\u003c/strong\u003e：课程的前置知识，对齐学习目标，上手一个关于 Vue 3 的小应用，初识 Vue 3 新特性，了解 Vue 2 项目升级到 Vue 3 项目的注意事项。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e基础入门篇\u003c/strong\u003e：通过⼀个实例开发，对 Vue 3 的核心知识点做一个梳理，让你能够使用 Vue 3 进行简单的项目开发。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e全家桶实战篇\u003c/strong\u003e：介绍 Vue 相关的生态库，以及实战开发中需要用到的库，这一部分主要帮助你应对复杂项目。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eVue 3 进阶开发篇\u003c/strong\u003e：在前两个部分的基础之上，进一步深入理解 Vue 本身，帮助初级开发者往中高级方向进阶。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eVue 3 生态源码篇\u003c/strong\u003e：抛开常规的“考究”式源码分析，先宏观了解 Vue 的设计思路，也就是 Vue 为什么会是现在这个样子，之后带你手写实现 mini-vue。此为专栏的升华之处，你前面所积淀下来的编译原理、算法、设计模式等知识相当于你系统化学习前端的第一步，而这一步将会为你持续学习提供动力。\u003c/p\u003e\n",
+        "ucode": "25C0A36D628037",
+        "is_finish": true,
+        "author": {
+          "name": "大圣",
+          "intro": "前百度前端架构师",
+          "info": "",
+          "avatar": "https://static001.geekbang.org/resource/image/28/b5/28b98541f998e641eb1ac5502ed634b5.jpg",
+          "brief_html": "\u003cp\u003e大圣，前百度前端架构师，9 年前端开发经验，精通 Vue/React/前端工程化（源码级），对前端架构、小程序、移动端和 Node.js 整个前端技术栈均有着丰富的实战经验。同时，他也是组件库 Element3 作者，精进技术之余，多年保持稳定输出，对前端萌新如何快速进阶有着深刻的认识与独到见解。\u003c/p\u003e\n",
+          "brief": "大圣，前百度前端架构师，9 年前端开发经验，精通 Vue/React/前端工程化（源码级），对前端架构、小程序、移动端和 Node.js 整个前端技术栈均有着丰富的实战经验。同时，他也是组件库 Element3 作者，精进技术之余，多年保持稳定输出，对前端萌新如何快速进阶有着深刻的认识与独到见解。\n"
+        },
+        "cover": {
+          "square": "https://static001.geekbang.org/resource/image/28/b5/28b98541f998e641eb1ac5502ed634b5.jpg",
+          "rectangle": "https://static001.geekbang.org/resource/image/79/ee/79b2byy18c2b5341985145018e4cbeee.jpg",
+          "horizontal": "https://static001.geekbang.org/resource/image/10/56/107e3bab6f014c47b37e0b9f103b7d56.jpg",
+          "lecture_horizontal": "https://static001.geekbang.org/resource/image/25/e7/25de457051259e6ca0e2049793c3d6e7.jpg",
+          "learn_horizontal": "https://static001.geekbang.org/resource/image/6a/74/6aa101e7332d960764b49ef6e843dc74.png",
+          "transparent": "https://static001.geekbang.org/resource/image/80/c9/80248ff2cb5deebyy3a3a086b92c7fc9.png",
+          "color": "#e4cabb"
+        },
+        "article": {
+          "id": 0,
+          "count": 43,
+          "count_req": 40,
+          "count_pub": 43,
+          "total_length": 26309,
+          "first_article_id": 0,
+          "first_article_title": ""
+        },
+        "seo": {
+          "keywords": [
+            "前端",
+            "Vue",
+            "Vue 3新特性",
+            "组件库",
+            "生态源码",
+            "Dom",
+            "vite",
+            "SSR",
+            "Vuex",
+            "响应式系统",
+            "tdd"
+          ]
+        },
+        "share": {
+          "title": "大圣 · 玩转Vue 3全家桶",
+          "content": "基础+实战+源码，全方位学透Vue 3",
+          "cover": "https://static001.geekbang.org/resource/image/28/b5/28b98541f998e641eb1ac5502ed634b5.jpg",
+          "poster": "https://static001.geekbang.org/resource/image/25/e5/255141fdc90a8019bfa3802baec254e5.jpg"
+        },
+        "labels": [5],
+        "unit": "43讲",
+        "column_type": 1,
+        "column": {
+          "unit": "43讲",
+          "bgcolor": "F6F7FB",
+          "update_frequency": "全集",
+          "is_preorder": false,
+          "is_finish": true,
+          "is_include_preview": true,
+          "show_chapter": true,
+          "is_sale_product": true,
+          "study_service": [1, 2, 3, 8, 9, 11, 12, 14],
+          "path": {
+            "desc": "你将获得\n\n系统高效的 Vue 3 学习路径；\nVue 3 新特性剖析与源码解读；\n5 大 Vue 3 开发中的重难点解析；\n链接 6 大前端深水区所需技能。\n\n",
+            "desc_html": "\u003cp\u003e\u003cstrong\u003e你将获得\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e系统高效的 Vue 3 学习路径；\u003c/li\u003e\n\u003cli\u003eVue 3 新特性剖析与源码解读；\u003c/li\u003e\n\u003cli\u003e5 大 Vue 3 开发中的重难点解析；\u003c/li\u003e\n\u003cli\u003e链接 6 大前端深水区所需技能。\u003c/li\u003e\n\u003c/ul\u003e\n"
+          },
+          "is_camp": false,
+          "catalog_pic_url": "https://static001.geekbang.org/resource/image/90/c4/9003217607cf0a13c435eb364fc710c4.jpg",
+          "recommend_articles": [
+            427660, 428904, 431955, 433968, 440504, 471017
+          ],
+          "recommend_comments": [316802],
+          "ranks": null,
+          "hot_comments": null,
+          "hot_lines": null,
+          "display_type": 3,
+          "intro_bg_style": 4,
+          "comment_top_ads": "",
+          "article_float_qrcode_url": "",
+          "article_float_app_qrcode_url": "",
+          "article_float_qrcode_jump": "",
+          "in_rank": true
+        },
+        "dl": {
+          "article": {
+            "id": 0,
+            "video_duration": "",
+            "video_hot": 0,
+            "could_preview": false
+          },
+          "topic_ids": []
+        },
+        "university": {
+          "total_hour": 0,
+          "term": 0,
+          "redirect_type": "",
+          "redirect_param": "",
+          "wx_qrcode": "",
+          "wx_rule": "",
+          "server_start_time": 0,
+          "lecturer_h_cover": ""
+        },
+        "opencourse": {
+          "video_bg": "",
+          "ad": {
+            "cover": "",
+            "cover_web": "",
+            "redirect_type": "",
+            "redirect_param": ""
+          },
+          "article_fav": { "aid": 0, "had_done": false, "count": 0 },
+          "author_h_cover": ""
+        },
+        "qconp": {
+          "topic_id": 0,
+          "cover_appoint": "",
+          "article": {
+            "id": 0,
+            "cover": "",
+            "video_duration": "",
+            "video_hot": 0
+          }
+        },
+        "fav_qrcode": "",
+        "extra": {
+          "sub": {
+            "count": 14752,
+            "had_done": true,
+            "could_order": true,
+            "access_mask": 64
+          },
+          "fav": { "count": 0, "had_done": false },
+          "rate": {
+            "article_count": 0,
+            "article_count_req": 0,
+            "is_finished": false,
+            "rate_percent": 0,
+            "video_seconds": 0,
+            "last_article_id": 0,
+            "last_chapter_id": 0,
+            "has_learn": false
+          },
+          "cert": { "id": "", "type": 0 },
+          "nps": {
+            "min": 20,
+            "status": 0,
+            "url": "https://jinshuju.net/f/magvVx"
+          },
+          "any_read": { "total": 4, "count": 0 },
+          "university": {
+            "status": 0,
+            "view_status": 0,
+            "charge_status": 0,
+            "share_renewal_status": 0,
+            "unlocked_status": 0,
+            "unlocked_chapter_ids": [],
+            "unlocked_chapter_id": 0,
+            "unlocked_chapter_title": "",
+            "unlocked_article_count": 0,
+            "unlocked_next_time": 0,
+            "expire_time": 0,
+            "is_expired": false,
+            "is_graduated": false,
+            "had_sub": false,
+            "timeline": [],
+            "has_wx_friend": false,
+            "sub_term_title": ""
+          },
+          "vip": {
+            "is_year_card": false,
+            "show": true,
+            "end_time": 1681315198
+          },
+          "appoint": { "could_do": false, "had_done": false, "count": 0 },
+          "group_buy": {
+            "success_ucount": 0,
+            "join_code": "",
+            "could_groupbuy": false,
+            "had_join": false,
+            "price": 0,
+            "list": []
+          },
+          "sharesale": {
+            "original_pic_color": "324D53",
+            "original_pic_url": "https://static001.geekbang.org/render/screen/d4/cd/d4df53ed679c670e0d03fce96bca73cd.jpeg",
+            "promo_pic_color": "324D53",
+            "promo_pic_url": "https://static001.geekbang.org/render/screen/d4/cd/d4df53ed679c670e0d03fce96bca73cd.jpeg",
+            "share_sale_price": 2000,
+            "share_sale_guest_price": 0
+          },
+          "promo": { "ent_time": 0 },
+          "channel": { "is": false, "back_amount": 0 },
+          "first_promo": { "price": 0, "could_join": false },
+          "coupon_promo": { "could_join": false, "price": 0 },
+          "helper": [],
+          "tab": { "comment": false },
+          "modules": [
+            {
+              "name": "gain",
+              "title": "",
+              "content": "\n系统高效的 Vue 3 学习路径\nVue 3 新特性剖析与源码解读\n5 大 Vue 3 开发中的重难点解析\n链接 6 大前端深水区所需技能\n\n",
+              "type": "",
+              "is_top": false
+            }
+          ],
+          "cid": 0,
+          "first_aids": [],
+          "study_plan": {
+            "id": 0,
+            "day_nums": 0,
+            "article_nums": 0,
+            "learned_week_nums": 0,
+            "status": 0
+          },
+          "cate_id": 303,
+          "cate_name": "",
+          "group_tag": { "is_recommend": false, "is_recently_learn": false },
+          "first_award": {
+            "show": false,
+            "talks": 0,
+            "reads": 0,
+            "amount": 0,
+            "expire_time": 0,
+            "redirect_type": "",
+            "redirect_param": ""
+          }
+        },
+        "available_coupons": [2631],
+        "in_pvip": 1
+      }
+    ],
+    "articles": null,
+    "labels": null
+  },
+  "error": {},
+  "extra": {
+    "cost": 0.117786203,
+    "request-id": "f4d5993c66a6023293c05325765abc73@2@time"
+  }
+}
